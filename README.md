@@ -2,8 +2,10 @@
 
 **Compile and Run**
 ```
-g++ main.cpp Phonet.cpp -o generate
-./generate
+mkdir build
+cd build
+cmake ../
+make
 ```
 
-Working on explanation of wtf this is and options for modifying generator output.
+Will generate words for you based off of the rules of the *English Phonetic Alphabet* rather than just the *English Alphabet*. That's the goal. It generates phonetic versions of words currently, but it is not currently using the rules of the phonetic alphabet. Going to get on that soon.
