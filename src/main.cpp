@@ -63,7 +63,7 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
   The number of arguments provided on the command line (includes executable
   name)
 
-/param argv
+\param argv
   An array of character arrays containing the strings provided on the command
   line.
 
