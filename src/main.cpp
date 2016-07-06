@@ -17,10 +17,11 @@
 */
 /*****************************************************************************/
 
-#include <fstream> // ifstream
-#include <vector>  // vector:c
-#include <string>  // string:c
-#include <ctime>   // time
+#include <iostream> // cout, endl
+#include <fstream>  // ifstream
+#include <vector>   // vector:c
+#include <string>   // string:c
+#include <ctime>    // time
 
 #include "../header/Phonet.h" // Phonet:c
 

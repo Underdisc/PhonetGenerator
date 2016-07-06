@@ -15,10 +15,8 @@
 #define Phonet_H
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstdlib>  // srand, rand
 #include <string>   // string:c
 #include <vector>   // vector:c
-#include <iostream> // cout
 
 /*****************************************************************************/
 /*!
