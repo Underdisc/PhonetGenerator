@@ -52,8 +52,8 @@ class Phonet
     void generate(std::vector<std::string> &, std::vector<std::string> &,
                   unsigned);
     void print();
-  private:
 
+  private:
     //! The vector containing all of the phonemes responsible for creating the
     // Phonet.
     std::vector<std::string> m_phonet;
@@ -61,6 +61,7 @@ class Phonet
     unsigned m_min_length;
     //! The maximum number of phonemes that this Phonet can contain.
     unsigned m_max_length;
+
 /*****************************************************************************/
 /*!
 \enum Phoneme_Type
@@ -74,7 +75,6 @@ class Phonet
     - VOWEL
 */
 /*****************************************************************************/
-
     enum Phoneme_Type
     {
       CONSONANT = 0,

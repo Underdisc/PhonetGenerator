@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Phonet.cpp File Reference</title>
+<title>Phoneme.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,52 +48,44 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('_phonet_8cpp.html','');});
+$(document).ready(function(){initNavTree('_phoneme_8h.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Phonet.cpp File Reference</div>  </div>
+<div class="title">Phoneme.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s header file.  
+<p>Interface for the <a class="el" href="class_phoneme.html" title="A Phoneme is a fundamental sound within a language. Combinations of phonemes are responsible for crea...">Phoneme</a> class.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="_phonet_8h_source.html">../header/Phonet.h</a>&quot;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
-<p><a href="_phonet_8cpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="_phoneme_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_phoneme.html">Phoneme</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_phoneme.html" title="A Phoneme is a fundamental sound within a language. Combinations of phonemes are responsible for crea...">Phoneme</a> is a fundamental sound within a language. Combinations of phonemes are responsible for creating the pronunciation of words. For example, the english /b/ phoneme is responsible for the &lt;beh&gt; sound in the word &lt;b&gt;ad. This <a class="el" href="class_phoneme.html" title="A Phoneme is a fundamental sound within a language. Combinations of phonemes are responsible for crea...">Phoneme</a> class is for storing those phonemes and certain traits they have.  <a href="class_phoneme.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s header file. </p>
+<div class="textblock"><p>Interface for the <a class="el" href="class_phoneme.html" title="A Phoneme is a fundamental sound within a language. Combinations of phonemes are responsible for crea...">Phoneme</a> class. </p>
 <dl class="section author"><dt>Author</dt><dd>Connor Deakin </dd></dl>
 <dl class="section user"><dt>E-mail: connortdeakin@gmail.com</dt><dd></dd></dl>
 <dl class="section user"><dt>Project: PhonetGenerator</dt><dd></dd></dl>
-<dl class="section date"><dt>Date</dt><dd>27/06/2016 </dd></dl>
-<dl class="section user"><dt></dt><dd>Functions Include:<ul>
-<li>Default Constructor</li>
-<li>Parameterized Constructor: 2</li>
-<li>Destructor</li>
-<li>generate</li>
-<li>print</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Functions Undergoing Improvement</dt><dd><ul>
-<li>generate</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt>Future Functions</dt><dd><ul>
-<li>spelling: will suggest a spelling for the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. </li>
-</ul>
-</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>06/07/2016 </dd></dl>
 
-<p>Definition in file <a class="el" href="_phonet_8cpp_source.html">Phonet.cpp</a>.</p>
+<p>Definition in file <a class="el" href="_phoneme_8h_source.html">Phoneme.h</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_phonet_8cpp.html">Phonet.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_1ec98ce50fa6ec55b40b8ffb1df38c3c.html">header</a></li><li class="navelem"><a class="el" href="_phoneme_8h.html">Phoneme.h</a></li>
     <li class="footer">Generated on Wed Jul 6 2016 07:00:11 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

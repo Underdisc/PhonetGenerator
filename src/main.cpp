@@ -23,7 +23,8 @@
 #include <string>   // string:c
 #include <ctime>    // time
 
-#include "../header/Phonet.h" // Phonet:c
+#include "../header/Phoneme.h" // Phoneme:c
+#include "../header/Phonet.h"  // Phonet:c
 
 /*****************************************************************************/
 /*!
@@ -74,6 +75,7 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
 
 int main(int argc, char ** argv)
 {
+
   std::vector<std::string> phoneme_consonant;
   std::vector<std::string> phoneme_vowel;
   std::vector<std::string> pronunciation_consonant;
