@@ -33,31 +33,31 @@
 /*****************************************************************************/
 /*!
 \brief
-  Defualt constructor for the Phonet. m_phonet(0), m_min_length(2),
-  m_max_length(10)
+  Defualt constructor for the Phonet. A Phonet will start with a min length of
+  2 and a max length of 10.
 */
 /*****************************************************************************/
-Phonet::Phonet() : m_phonet(0), m_min_length(2), m_max_length(10)
+Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
 {
-
 }
 
 /*****************************************************************************/
 /*!
 \brief
   Parameterized Constructor. The Phonet will be generated during the
-  object creation. m_min_length(2), m_max_length(10)
+  object creation. The Phonet will begin with a min length of 2 and a max length
+  of ten.
 
 \param consonants
-  A reference to the vector of consonants being used for the Phonet.
+  A reference to the vector of consonant Phonmes being used for the Phonet.
 \param vowels
-  A reference to the vector of vowels being used for the Phonet.
+  A reference to the vector of vowel Phonemes being used for the Phonet.
 \param seed
   The seed being used for the generator.
 */
 /*****************************************************************************/
-Phonet::Phonet(std::vector<std::string> & consonants,
-               std::vector<std::string> & vowels,
+Phonet::Phonet(std::vector<Phoneme> & consonants,
+               std::vector<Phoneme> & vowels,
                unsigned seed):
 m_min_length(2),
 m_max_length(10)
@@ -68,9 +68,9 @@ m_max_length(10)
 /*****************************************************************************/
 /*!
 \brief
-  Parameterized constructor. Given a vector of strings containing phonemes, a
-  Phonet object will be created. m_min_length(phonemes.size()),
-  m_max_length(phonemes.size())
+  Parameterized constructor. Given a vector of Phonemes, a Phonet object will
+  be created. The min and max lengths of the Phonet will be the size of the
+  Phoneme vector.
 
 \param phonemes
   The vector of strings containing the phonemes the Phonet will be initialized
@@ -78,11 +78,11 @@ m_max_length(10)
 */
 /*****************************************************************************/
 
-Phonet::Phonet(std::vector<std::string> & phonemes):
+Phonet::Phonet(std::vector<Phoneme> & phonemes):
 m_min_length(phonemes.size()),
 m_max_length(phonemes.size())
 {
-  m_phonet = phonemes;
+  m_phonemes = phonemes;
 }
 
 /*****************************************************************************/
@@ -97,25 +97,25 @@ Phonet::~Phonet()
 /*****************************************************************************/
 /*!
 \brief
-  Given a vector of both consonant and vowel phonemes and a seed, a randomized
+  Given a vector of both consonant and vowel Phonemes and a seed, a randomized
   phonet will be generated with the rules of the English phonetic alphabet.
   This is currently pretty screwy.
 
 \param consonants
-  The Vector of consonants being used for the generation.
+  The Vector of consonant Phonemes being used for the generation.
 \param vowels
-  The vector of vowels being used for the gneneration.
+  The vector of vowel Phonemes being used for the gneneration.
 \param seed
   The seed used for the random number generator.
 */
 /*****************************************************************************/
 
-void Phonet::generate(std::vector<std::string> & consonants,
-                      std::vector<std::string> & vowels,
+void Phonet::generate(std::vector<Phoneme> & consonants,
+                      std::vector<Phoneme> & vowels,
                       unsigned seed)
 {
   srand(seed);
-  m_phonet.clear();
+  m_phonemes.clear();
 
   unsigned length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
   Phoneme_Type type = static_cast<Phoneme_Type>(rand() % 2);
@@ -125,14 +125,14 @@ void Phonet::generate(std::vector<std::string> & consonants,
     if(type)
     {
       unsigned vowel_index = rand() % vowels.size();
-      m_phonet.push_back(vowels[vowel_index]);
+      m_phonemes.push_back(vowels[vowel_index]);
       type = static_cast<Phoneme_Type>(0);
 
     }
     else
     {
       unsigned consonant_index = rand() % consonants.size();
-      m_phonet.push_back(consonants[consonant_index]);
+      m_phonemes.push_back(consonants[consonant_index]);
       type = static_cast<Phoneme_Type>(1);
     }
     --length;
@@ -142,18 +142,17 @@ void Phonet::generate(std::vector<std::string> & consonants,
 /*****************************************************************************/
 /*!
 \brief
-  Prints out the constructed Phonet to console.
+  Prints out the Phonemes in the constructed Phonet to console.
 */
 /*****************************************************************************/
 void Phonet::print()
 {
-  std::vector<std::string>::iterator phoneme;
-  phoneme = m_phonet.begin();
+  std::vector<Phoneme>::iterator phoneme;
+  phoneme = m_phonemes.begin();
   std::cout << *phoneme;
-  while(phoneme != m_phonet.end())
+  while(phoneme != m_phonemes.end())
   {
     std::cout << ":" << *phoneme;
     ++phoneme;
   }
-  std::cout << std::endl;
 }

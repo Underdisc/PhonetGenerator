@@ -28,6 +28,17 @@
 /*****************************************************************************/
 /*!
 \brief
+  Default constructor for the Phoneme object. Both strings within the Phoneme
+  object are constructed as empty strings.
+*/
+/*****************************************************************************/
+Phoneme::Phoneme(): m_phoneme(0), m_example(0)
+{
+}
+
+/*****************************************************************************/
+/*!
+\brief
   Parameterized Constructor for a Phoneme.
 
 \param phoneme

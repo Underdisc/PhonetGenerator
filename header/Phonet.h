@@ -15,6 +15,8 @@
 #define Phonet_H
 ///////////////////////////////////////////////////////////////////////////////
 
+#include "../header/Phoneme.h" //Phoneme:c
+
 #include <string>   // string:c
 #include <vector>   // vector:c
 
@@ -22,9 +24,10 @@
 /*!
 \class Phonet
 \brief
-  A Phonet is a vector of phonemes responsible for creating the phonetic version
-  of a word. Phonets should only be used to store the phonetic spellings of
-  words and not there actual spellings.
+  A Phonet is a vector of Phoneme objects responsible for creating the phonetic
+  version of a word. Since Phonets consist of Phonemes, the Phonet will also
+  hold the pronunciation of the word, suggested spellings for the word, and the
+  class will be able to generate its own Phonets.
 
 \par
     Operations include:
@@ -35,10 +38,10 @@
     - Printing a Phonet to console
 
 \deprecated
-    - Nothing
+    - Phonets now use Phoneme class instead of std::string.
 
 \bug
-    - Nothing
+    - The generation is terrible.
 */
 /*****************************************************************************/
 
@@ -46,27 +49,26 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(std::vector<std::string> &, std::vector<std::string> &, unsigned);
-    Phonet(std::vector<std::string> &);
+    Phonet(std::vector<Phoneme> &, std::vector<Phoneme> &, unsigned);
+    Phonet(std::vector<Phoneme> &);
     ~Phonet();
-    void generate(std::vector<std::string> &, std::vector<std::string> &,
-                  unsigned);
+    void generate(std::vector<Phoneme> &, std::vector<Phoneme> &, unsigned);
     void print();
 
   private:
-    //! The vector containing all of the phonemes responsible for creating the
+    //! The vector containing all of the Phonemes responsible for creating the
     // Phonet.
-    std::vector<std::string> m_phonet;
-    //! The minimum number of phonemes that this Phonet can contain.
+    std::vector<Phoneme> m_phonemes;
+    //! The minimum number of Phonemes that this Phonet can contain.
     unsigned m_min_length;
-    //! The maximum number of phonemes that this Phonet can contain.
+    //! The maximum number of Phonemes that this Phonet can contain.
     unsigned m_max_length;
 
 /*****************************************************************************/
 /*!
 \enum Phoneme_Type
 \brief
-  A phoneme can only be two types, a consonant or a vowel. This is used to
+  A Phoneme can only be two types, a consonant or a vowel. This is used to
   segment to the phoneme types in order to generate the Phonets
 
 \par

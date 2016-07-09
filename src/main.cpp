@@ -55,6 +55,23 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
   }
 }
 
+void create_phonemes(std::vector<Phoneme> & phonemes,
+                     std::vector<std::string> & sounds,
+                     std::vector<std::string> & examples)
+{
+
+  std::vector<std::string>::iterator sound;
+  std::vector<std::string>::iterator example;
+
+  for(sound = sounds.begin(), example = examples.begin();
+      sound != sounds.end() || example != examples.end();
+      ++sound, ++example)
+  {
+    Phoneme phoneme(*sound, *example);
+    phonemes.push_back(phoneme);
+  }
+}
+
 /*****************************************************************************/
 /*!
 \brief
@@ -75,19 +92,28 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
 
 int main(int argc, char ** argv)
 {
+  std::vector<std::string> str_phoneme_consonant;
+  std::vector<std::string> str_phoneme_vowel;
+  std::vector<std::string> str_pronunciation_consonant;
+  std::vector<std::string> str_pronunciation_vowel;
 
-  std::vector<std::string> phoneme_consonant;
-  std::vector<std::string> phoneme_vowel;
-  std::vector<std::string> pronunciation_consonant;
-  std::vector<std::string> pronunciation_vowel;
+  read_file(str_phoneme_consonant, "../data/phoneme/consonant.txt");
+  read_file(str_phoneme_vowel, "../data/phoneme/vowel.txt");
+  read_file(str_pronunciation_consonant, "../data/pronunciation/consonant.txt");
+  read_file(str_pronunciation_vowel, "../data/pronunciation/vowel.txt");
 
-  read_file(phoneme_consonant, "../data/phoneme/consonant.txt");
-  read_file(phoneme_vowel, "../data/phoneme/vowel.txt");
-  read_file(pronunciation_consonant, "../data/pronunciation/consonant.txt");
-  read_file(pronunciation_vowel, "../data/pronunciation/vowel.txt");
+  std::vector<Phoneme> phonemes_consonants;
+  std::vector<Phoneme> phonemes_vowels;
+
+  create_phonemes(phonemes_consonants,
+                  str_phoneme_consonant,
+                  str_pronunciation_consonant);
+  create_phonemes(phonemes_vowels,
+                  str_phoneme_vowel,
+                  str_pronunciation_vowel);
 
   Phonet phonet;
-  phonet.generate(phoneme_consonant, phoneme_vowel, (unsigned)time(0));
+  phonet.generate(phonemes_consonants, phonemes_vowels, (unsigned)time(0));
   phonet.print();
 
   return 0;

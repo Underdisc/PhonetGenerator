@@ -46,6 +46,7 @@
 class Phoneme
 {
   public:
+    Phoneme();
     Phoneme(const std::string &, const std::string &);
     Phoneme(const Phoneme &);
     ~Phoneme();
