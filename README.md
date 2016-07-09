@@ -19,7 +19,6 @@ Planned Features:
 
 **Current Version: 0.7**
 
-*Good versions will be in bold*
 Version List
 - Basic implementation versions
-- **0.7**
+- **0.7** - Contains a very basic generation method. The method used in this version switches back and forth between vowel and consonant phonemes. This version generates interesting phonets, however, it does not have an option interface.

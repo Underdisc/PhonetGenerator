@@ -56,8 +56,8 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   The seed being used for the generator.
 */
 /*****************************************************************************/
-Phonet::Phonet(std::vector<Phoneme> & consonants,
-               std::vector<Phoneme> & vowels,
+Phonet::Phonet(const std::vector<Phoneme> & consonants,
+               const std::vector<Phoneme> & vowels,
                unsigned seed):
 m_min_length(2),
 m_max_length(10)
@@ -78,7 +78,7 @@ m_max_length(10)
 */
 /*****************************************************************************/
 
-Phonet::Phonet(std::vector<Phoneme> & phonemes):
+Phonet::Phonet(const std::vector<Phoneme> & phonemes):
 m_min_length(phonemes.size()),
 m_max_length(phonemes.size())
 {
@@ -110,8 +110,8 @@ Phonet::~Phonet()
 */
 /*****************************************************************************/
 
-void Phonet::generate(std::vector<Phoneme> & consonants,
-                      std::vector<Phoneme> & vowels,
+void Phonet::generate(const std::vector<Phoneme> & consonants,
+                      const std::vector<Phoneme> & vowels,
                       unsigned seed)
 {
   srand(seed);

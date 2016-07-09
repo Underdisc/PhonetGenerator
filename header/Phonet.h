@@ -51,10 +51,12 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(std::vector<Phoneme> &, std::vector<Phoneme> &, unsigned);
-    Phonet(std::vector<Phoneme> &);
+    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
+           unsigned);
+    Phonet(const std::vector<Phoneme> &);
     ~Phonet();
-    void generate(std::vector<Phoneme> &, std::vector<Phoneme> &, unsigned);
+    void generate(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
+                  unsigned);
     void print_phonet() const;
     void print_pronunciation() const;
     friend std::ostream & operator<<(std::ostream & os, const Phonet & rhs);

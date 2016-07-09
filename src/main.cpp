@@ -71,11 +71,11 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
 */
 /*****************************************************************************/
 void create_phonemes(std::vector<Phoneme> & phonemes,
-                     std::vector<std::string> & sounds,
-                     std::vector<std::string> & examples)
+                     const std::vector<std::string> & sounds,
+                     const std::vector<std::string> & examples)
 {
-  std::vector<std::string>::iterator sound;
-  std::vector<std::string>::iterator example;
+  std::vector<std::string>::const_iterator sound;
+  std::vector<std::string>::const_iterator example;
 
   for(sound = sounds.begin(), example = examples.begin();
       sound != sounds.end() || example != examples.end();
