@@ -145,14 +145,65 @@ void Phonet::generate(std::vector<Phoneme> & consonants,
   Prints out the Phonemes in the constructed Phonet to console.
 */
 /*****************************************************************************/
-void Phonet::print()
+void Phonet::print_phonet() const
 {
-  std::vector<Phoneme>::iterator phoneme;
+  std::vector<Phoneme>::const_iterator phoneme;
   phoneme = m_phonemes.begin();
-  std::cout << *phoneme;
-  while(phoneme != m_phonemes.end())
+  if(phoneme != m_phonemes.end())
   {
-    std::cout << ":" << *phoneme;
-    ++phoneme;
+    std::cout << *phoneme;
+    while(true)
+    {
+      ++phoneme;
+      if(phoneme == m_phonemes.end())
+        break;
+      std::cout << ":" << *phoneme;
+    }
   }
+}
+
+/*****************************************************************************/
+/*!
+\brief
+  Prints out an example of how the Phonet is supposed to be pronounced to
+  console. The example will consist of multiple words printed in the correct
+  order. Each word will consist of one Phoneme that is in the word generated.
+*/
+/*****************************************************************************/
+void Phonet::print_pronunciation() const
+{
+  std::vector<Phoneme>::const_iterator phoneme;
+  phoneme = m_phonemes.begin();
+  if(phoneme != m_phonemes.end())
+  {
+    (*phoneme).print_pronunciation();
+    while(true)
+    {
+      ++phoneme;
+      if(phoneme == m_phonemes.end())
+        break;
+      std::cout << std::endl;
+      (*phoneme).print_pronunciation();
+    }
+  }
+}
+
+/*****************************************************************************/
+/*!
+\brief
+  Overloads the output operator to print a Phonet to console. Only the Phonet
+  itself will be printed, not the pronunciation or suggested spellings.
+
+\param os
+  The ostream the phonet will be sent to.
+\param rhs
+  The Phonet that is being sent to the ostream.
+
+\return The ostream the Phonet was sent to.
+*/
+/*****************************************************************************/
+std::ostream & operator<<(std::ostream & os, const Phonet & rhs)
+{
+  rhs.print_phonet();
+  return os;
 }

@@ -52,20 +52,29 @@ $(document).ready(function(){initNavTree('_phonet_8cpp.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Phonet.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s header file.  
+<p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>'s header file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_phonet_8h_source.html">../header/Phonet.h</a>&quot;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 </div>
 <p><a href="_phonet_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af493aa44092e517217c023d751716d13"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_phonet_8cpp.html#af493aa44092e517217c023d751716d13">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="class_phonet.html">Phonet</a> &amp;rhs)</td></tr>
+<tr class="memdesc:af493aa44092e517217c023d751716d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the output operator to print a <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> to console. Only the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> itself will be printed, not the pronunciation or suggested spellings.  <a href="#af493aa44092e517217c023d751716d13">More...</a><br /></td></tr>
+<tr class="separator:af493aa44092e517217c023d751716d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>'s header file. </p>
+<div class="textblock"><p>Contains the implementation of the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>. Details on a <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>'s purpose can be found in the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>'s header file. </p>
 <dl class="section author"><dt>Author</dt><dd>Connor Deakin </dd></dl>
 <dl class="section user"><dt>E-mail: connortdeakin@gmail.com</dt><dd></dd></dl>
 <dl class="section user"><dt>Project: PhonetGenerator</dt><dd></dd></dl>
@@ -83,18 +92,60 @@ $(document).ready(function(){initNavTree('_phonet_8cpp.html','');});
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Future Functions</dt><dd><ul>
-<li>spelling: will suggest a spelling for the <a class="el" href="class_phonet.html" title="A Phonet is a vector of phonemes responsible for creating the phonetic version of a word...">Phonet</a>. </li>
+<li>spelling: will suggest a spelling for the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a>. </li>
 </ul>
 </dd></dl>
 
 <p>Definition in file <a class="el" href="_phonet_8cpp_source.html">Phonet.cpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="af493aa44092e517217c023d751716d13"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_phonet.html">Phonet</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads the output operator to print a <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> to console. Only the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> itself will be printed, not the pronunciation or suggested spellings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>The ostream the phonet will be sent to. </td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> that is being sent to the ostream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ostream the <a class="el" href="class_phonet.html" title="A Phonet is a vector of Phoneme objects responsible for creating the phonetic version of a word...">Phonet</a> was sent to. </dd></dl>
+
+<p>Definition at line <a class="el" href="_phonet_8cpp_source.html#l00205">205</a> of file <a class="el" href="_phonet_8cpp_source.html">Phonet.cpp</a>.</p>
+
+<p>References <a class="el" href="_phonet_8cpp_source.html#l00148">Phonet::print_phonet()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;{</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  rhs.<a class="code" href="class_phonet.html#ae02670b75510a49311a231e9f9d505fb">print_phonet</a>();</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordflow">return</span> os;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div><div class="ttc" id="class_phonet_html_ae02670b75510a49311a231e9f9d505fb"><div class="ttname"><a href="class_phonet.html#ae02670b75510a49311a231e9f9d505fb">Phonet::print_phonet</a></div><div class="ttdeci">void print_phonet() const </div><div class="ttdoc">Prints out the Phonemes in the constructed Phonet to console. </div><div class="ttdef"><b>Definition:</b> <a href="_phonet_8cpp_source.html#l00148">Phonet.cpp:148</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_phonet_8cpp.html">Phonet.cpp</a></li>
-    <li class="footer">Generated on Wed Jul 6 2016 07:00:11 by
+    <li class="footer">Generated on Fri Jul 8 2016 23:41:58 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

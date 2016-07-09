@@ -55,11 +55,25 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
   }
 }
 
+/*****************************************************************************/
+/*!
+\brief
+  A helper function that takes in the string data read from file and puts the
+  data into Phonemes in order to use the Phonemes within a Phonet.
+
+\param phonemes
+  All the Phoneme data will be stored in this vector of Phonemes.
+\param sounds
+  A vector of strings in which the string data for a Phoneme is stored.
+\param examples
+  A vector of strings in which examples of pronunciations of the Phonemes are
+  stored.
+*/
+/*****************************************************************************/
 void create_phonemes(std::vector<Phoneme> & phonemes,
                      std::vector<std::string> & sounds,
                      std::vector<std::string> & examples)
 {
-
   std::vector<std::string>::iterator sound;
   std::vector<std::string>::iterator example;
 
@@ -114,7 +128,9 @@ int main(int argc, char ** argv)
 
   Phonet phonet;
   phonet.generate(phonemes_consonants, phonemes_vowels, (unsigned)time(0));
-  phonet.print();
+  std::cout << phonet << std::endl;
+  phonet.print_pronunciation();
+  std::cout << std::endl;
 
   return 0;
 }

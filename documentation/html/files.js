@@ -5,7 +5,7 @@ var files =
     [ "Phoneme.h", "_phoneme_8h.html", [
       [ "Phoneme", "class_phoneme.html", "class_phoneme" ]
     ] ],
-    [ "Phonet.cpp", "_phonet_8cpp.html", null ],
+    [ "Phonet.cpp", "_phonet_8cpp.html", "_phonet_8cpp" ],
     [ "Phonet.h", "_phonet_8h.html", [
       [ "Phonet", "class_phonet.html", "class_phonet" ]
     ] ]

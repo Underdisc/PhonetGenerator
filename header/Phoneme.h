@@ -37,7 +37,7 @@
     - Printing a Phoneme with the output operator
 
 \deprecated
-    - Nothing
+    - print_example changed to print_pronunciation
 
 \bug
     - Nothing
@@ -50,8 +50,8 @@ class Phoneme
     Phoneme(const std::string &, const std::string &);
     Phoneme(const Phoneme &);
     ~Phoneme();
-    void print_phoneme();
-    void print_example();
+    void print_phoneme() const;
+    void print_pronunciation() const;
     Phoneme & operator=(const Phoneme &);
     friend std::ostream & operator<<(std::ostream &, const Phoneme &);
 

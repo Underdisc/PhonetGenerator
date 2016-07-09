@@ -82,7 +82,7 @@ Phoneme::~Phoneme()
   Prints the phoneme string to console.
 */
 /*****************************************************************************/
-void Phoneme::print_phoneme()
+void Phoneme::print_phoneme() const
 {
   std::cout << m_phoneme;
 }
@@ -93,7 +93,7 @@ void Phoneme::print_phoneme()
   Prints the example of how the phoneme is used to console.
 */
 /*****************************************************************************/
-void Phoneme::print_example()
+void Phoneme::print_pronunciation() const
 {
   std::cout << m_example;
 }

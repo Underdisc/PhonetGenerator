@@ -36,6 +36,8 @@
     - Constructing an already existing Phonet
     - Generating a random Phonet
     - Printing a Phonet to console
+    - Printing a Phonets pronunciation to console
+    - Printing a Phonet to console using << operator
 
 \deprecated
     - Phonets now use Phoneme class instead of std::string.
@@ -53,7 +55,9 @@ class Phonet
     Phonet(std::vector<Phoneme> &);
     ~Phonet();
     void generate(std::vector<Phoneme> &, std::vector<Phoneme> &, unsigned);
-    void print();
+    void print_phonet() const;
+    void print_pronunciation() const;
+    friend std::ostream & operator<<(std::ostream & os, const Phonet & rhs);
 
   private:
     //! The vector containing all of the Phonemes responsible for creating the
