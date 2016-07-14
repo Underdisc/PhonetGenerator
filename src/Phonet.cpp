@@ -15,13 +15,13 @@
     - Parameterized Constructor: 2
     - Destructor
     - generate
-    - print
+    - print_phonet
+    - print_pronunciation
+    - print_spelling
+    - operator <<
 
 \par Functions Undergoing Improvement
     - generate
-
-\par Future Functions
-    - spelling: will suggest a spelling for the Phonet.
 */
 /*****************************************************************************/
 
@@ -186,6 +186,19 @@ void Phonet::print_pronunciation() const
       (*phoneme).print_pronunciation();
     }
   }
+}
+
+/*****************************************************************************/
+/*!
+\brief
+  Prints a possible random spelling for the Phonet.
+*/
+/*****************************************************************************/
+void Phonet::print_spelling() const
+{
+  std::vector<Phoneme>::const_iterator phoneme;
+  for(phoneme = m_phonemes.begin(); phoneme != m_phonemes.end(); ++phoneme)
+    (*phoneme).print_spelling();
 }
 
 /*****************************************************************************/

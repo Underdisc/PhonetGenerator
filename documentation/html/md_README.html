@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Class Index</title>
+<title>Phonet Genertor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,15 +25,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li class="current"><a href="pages.html"><span>Related&#160;Pages</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -48,29 +40,32 @@
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classes.html','');});
+$(document).ready(function(){initNavTree('md_README.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Class Index</div>  </div>
+<div class="title">Phonet Genertor </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_P">P</a></div>
-<table class="classindex">
-<tr><td rowspan="2" valign="bottom"><a name="letter_P"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;P&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="class_phonet.html">Phonet</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td></td><td></td></tr>
-<tr><td valign="top"><a class="el" href="class_phoneme.html">Phoneme</a>&#160;&#160;&#160;</td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td></tr>
-</table>
-<div class="qindex"><a class="qindex" href="#letter_P">P</a></div>
-</div><!-- contents -->
+<div class="textblock"><p><b>Compile and Run</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;cmake ../</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;make</div></div><!-- fragment --><p>All current documentation can be found in documentation/html/index.html</p>
+<p>Will generate words for you based off of the rules of the <em>English Phonetic Alphabet</em> rather than just the <em>English Alphabet</em>. That's the goal. It generates phonetic versions of words currently, but it is not currently using the rules of the phonetic alphabet. Going to get on that soon.</p>
+<p>Planned Features:</p><ul>
+<li>Generate suggested spellings.</li>
+<li>Options for choosing what the program does.</li>
+<li>More robust generation system in order to use any phonetic alphabet.</li>
+</ul>
+<p><b>Current Version: 0.7</b></p>
+<p>Version List</p><ul>
+<li>Basic implementation versions</li>
+<li><b>0.7</b> - Contains a very basic generation method. The method used in this version switches back and forth between vowel and consonant phonemes. This version generates interesting phonets, however, it does not have an option interface. </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jul 14 2016 09:03:36 by
+    <li class="footer">Generated on Wed Jul 13 2016 11:43:05 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>

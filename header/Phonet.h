@@ -25,9 +25,15 @@
 \class Phonet
 \brief
   A Phonet is a vector of Phoneme objects responsible for creating the phonetic
-  version of a word. Since Phonets consist of Phonemes, the Phonet will also
-  hold the pronunciation of the word, suggested spellings for the word, and the
-  class will be able to generate its own Phonets.
+  version of a word. If you search for a phonet on the internet, you will likely
+  find doucments relating to phonetics. I needed a name for a string of
+  phonemes, so I called it a phonet. The Phonemes within the phonet also have
+  data that allow phonets to display it's pronunciation and possible spellings
+  for the word the phonet can represent.
+
+\par
+    Phonet Resources
+    - <a href="https://en.wikipedia.org/wiki/Phonetics">Phonetics</a>
 
 \par
     Operations include:
@@ -37,6 +43,7 @@
     - Generating a random Phonet
     - Printing a Phonet to console
     - Printing a Phonets pronunciation to console
+    - Printing a possible spelling for the Phonet
     - Printing a Phonet to console using << operator
 
 \deprecated
@@ -59,6 +66,7 @@ class Phonet
                   unsigned);
     void print_phonet() const;
     void print_pronunciation() const;
+    void print_spelling() const;
     friend std::ostream & operator<<(std::ostream & os, const Phonet & rhs);
 
   private:

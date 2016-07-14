@@ -15,7 +15,8 @@
     - Copy Constructor
     - Destructor
     - print_phoneme
-    - print_example
+    - print_pronunciation
+    - print_spelling
     - operator=
     - operator<<
 */
@@ -32,7 +33,7 @@
   object are constructed as empty strings.
 */
 /*****************************************************************************/
-Phoneme::Phoneme(): m_phoneme(0), m_example(0)
+Phoneme::Phoneme(): m_phoneme(0), m_example(0), m_spellings(0)
 {
 }
 
@@ -45,10 +46,13 @@ Phoneme::Phoneme(): m_phoneme(0), m_example(0)
   A standard string containing the phoneme.
 \param example
   A standard string containing an example of the phoneme in use.
+\param spellings
+  A vector a strings which contain possible spellings for the Phoneme.
 */
 /*****************************************************************************/
-Phoneme::Phoneme(const std::string & phoneme, const std::string & example)
-: m_phoneme(phoneme), m_example(example)
+Phoneme::Phoneme(const std::string & phoneme, const std::string & example,
+                 const std::vector<std::string> & spellings)
+: m_phoneme(phoneme), m_example(example), m_spellings(spellings)
 {
 }
 
@@ -62,7 +66,8 @@ Phoneme::Phoneme(const std::string & phoneme, const std::string & example)
 */
 /*****************************************************************************/
 Phoneme::Phoneme(const Phoneme & other)
-: m_phoneme(other.m_phoneme), m_example(other.m_example)
+: m_phoneme(other.m_phoneme), m_example(other.m_example),
+  m_spellings(other.m_spellings)
 {
 }
 
@@ -101,6 +106,17 @@ void Phoneme::print_pronunciation() const
 /*****************************************************************************/
 /*!
 \brief
+  Prints one of the multiple spellings the Phoneme can have.
+*/
+/*****************************************************************************/
+void Phoneme::print_spelling() const
+{
+  std::cout << m_spellings.at(0);
+}
+
+/*****************************************************************************/
+/*!
+\brief
   Overloads the '=' operator in order to allow phonemes to be set equal to
   eachother.
 
@@ -116,6 +132,7 @@ Phoneme & Phoneme::operator=(const Phoneme & rhs)
   {
     m_phoneme = rhs.m_phoneme;
     m_example = rhs.m_example;
+    m_spellings = rhs.m_spellings;
   }
   return *this;
 }

@@ -28,13 +28,20 @@
   This Phoneme class is for storing those phonemes and certain traits they have.
 
 \par
+    Phoneme Resources
+    - <a href="http://goo.gl/FY1xss">The 44 English Phonemes</a>
+    - <a href="https://en.wikipedia.org/wiki/Phoneme">Phonemes</a>
+
+\par
     Operations include:
     - Constructing a Phoneme using strings
     - Constructing a Phoneme with a Phoneme
     - Printing the Phoneme
     - Printing an example of how the Phoneme is used
+    - Printing a possible spelling for the phoneme
     - Setting one Phoneme equal to another
     - Printing a Phoneme with the output operator
+    - Printing one of multiple spelling reprentations of the Phoneme
 
 \deprecated
     - print_example changed to print_pronunciation
@@ -47,11 +54,13 @@ class Phoneme
 {
   public:
     Phoneme();
-    Phoneme(const std::string &, const std::string &);
+    Phoneme(const std::string &, const std::string &,
+            const std::vector<std::string> &);
     Phoneme(const Phoneme &);
     ~Phoneme();
     void print_phoneme() const;
     void print_pronunciation() const;
+    void print_spelling() const;
     Phoneme & operator=(const Phoneme &);
     friend std::ostream & operator<<(std::ostream &, const Phoneme &);
 
@@ -60,6 +69,9 @@ class Phoneme
     std::string m_phoneme;
     //! The string where an example usage of the phoneme is stored.
     std::string m_example;
+    //! This vector contains strings the represent possible ways of spelling out
+    // a Phoneme.
+    std::vector<std::string> m_spellings;
 };
 
 #endif

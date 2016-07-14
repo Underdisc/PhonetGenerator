@@ -18,73 +18,13 @@
 /*****************************************************************************/
 
 #include <iostream> // cout, endl
-#include <fstream>  // ifstream
 #include <vector>   // vector:c
 #include <string>   // string:c
 #include <ctime>    // time
 
-#include "../header/Phoneme.h" // Phoneme:c
-#include "../header/Phonet.h"  // Phonet:c
-
-/*****************************************************************************/
-/*!
-\brief
-  Reads in each line from a file into seperate elemnts of a provided vector.
-
-\param vector
-  A reference to the vector the file data will be pushed into.
-
-\param file_name
-  The name of the file being read into the vector reference.
-*/
-/*****************************************************************************/
-void read_file(std::vector<std::string> & vector, const char * file_name)
-{
-  std::ifstream file(file_name);
-  if(!file.is_open())
-    std::cout << "File [" << file_name << "] Not Opened" << std::endl;
-  else
-  {
-    std::string line;
-    std::getline(file, line);
-    while(!file.eof())
-    {
-      vector.push_back(line);
-      std::getline(file, line);
-    }
-  }
-}
-
-/*****************************************************************************/
-/*!
-\brief
-  A helper function that takes in the string data read from file and puts the
-  data into Phonemes in order to use the Phonemes within a Phonet.
-
-\param phonemes
-  All the Phoneme data will be stored in this vector of Phonemes.
-\param sounds
-  A vector of strings in which the string data for a Phoneme is stored.
-\param examples
-  A vector of strings in which examples of pronunciations of the Phonemes are
-  stored.
-*/
-/*****************************************************************************/
-void create_phonemes(std::vector<Phoneme> & phonemes,
-                     const std::vector<std::string> & sounds,
-                     const std::vector<std::string> & examples)
-{
-  std::vector<std::string>::const_iterator sound;
-  std::vector<std::string>::const_iterator example;
-
-  for(sound = sounds.begin(), example = examples.begin();
-      sound != sounds.end() || example != examples.end();
-      ++sound, ++example)
-  {
-    Phoneme phoneme(*sound, *example);
-    phonemes.push_back(phoneme);
-  }
-}
+#include "../header/Phoneme.h"   // Phoneme:c
+#include "../header/Phonet.h"    // Phonet:c
+#include "../header/data_grab.h" // read_file, create_phonemes
 
 /*****************************************************************************/
 /*!
@@ -106,30 +46,27 @@ void create_phonemes(std::vector<Phoneme> & phonemes,
 
 int main(int argc, char ** argv)
 {
-  std::vector<std::string> str_phoneme_consonant;
-  std::vector<std::string> str_phoneme_vowel;
-  std::vector<std::string> str_pronunciation_consonant;
-  std::vector<std::string> str_pronunciation_vowel;
+  std::vector<std::string> str_vowels;
+  std::vector<std::string> str_consonants;
 
-  read_file(str_phoneme_consonant, "../data/phoneme/consonant.txt");
-  read_file(str_phoneme_vowel, "../data/phoneme/vowel.txt");
-  read_file(str_pronunciation_consonant, "../data/pronunciation/consonant.txt");
-  read_file(str_pronunciation_vowel, "../data/pronunciation/vowel.txt");
+  read_file(str_consonants, "../data/phoneme/consonant.txt");
+  read_file(str_vowels, "../data/phoneme/vowel.txt");
+
 
   std::vector<Phoneme> phonemes_consonants;
   std::vector<Phoneme> phonemes_vowels;
 
   create_phonemes(phonemes_consonants,
-                  str_phoneme_consonant,
-                  str_pronunciation_consonant);
+                  str_consonants);
   create_phonemes(phonemes_vowels,
-                  str_phoneme_vowel,
-                  str_pronunciation_vowel);
+                  str_vowels);
 
   Phonet phonet;
   phonet.generate(phonemes_consonants, phonemes_vowels, (unsigned)time(0));
   std::cout << phonet << std::endl;
   phonet.print_pronunciation();
+  std::cout << std::endl;
+  phonet.print_spelling();
   std::cout << std::endl;
 
   return 0;
