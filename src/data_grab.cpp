@@ -85,7 +85,7 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
 */
 /*****************************************************************************/
 void parse (std::vector<std::string> & storage, const std::string & data,
-            const int delimiter)
+            const char delimiter)
 {
   size_t start = 0;
   size_t end = 0;
@@ -162,7 +162,7 @@ void create_phonemes(std::vector<Phoneme> & phonemes,
     parse_phoneme_data(phoneme, pronunciation, spellings_str, (*phoneme_data));
 
     std::vector<std::string> spellings;
-    parse(spellings, spellings_str, ',');
+    parse(spellings, spellings_str, (char)',');
 
     Phoneme new_phoneme(phoneme, pronunciation, spellings);
     phonemes.push_back(new_phoneme);

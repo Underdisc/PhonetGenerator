@@ -13,7 +13,7 @@
 
 void read_file(std::vector<std::string> & vector, const char * file_name);
 void parse (std::vector<std::string> & storage, const std::string & data,
-            const int delimiter);
+            const char delimiter);
 void parse_phoneme_data(std::string & phoneme, std::string & pronunciation,
                    std::string & spellings, const std::string & data);
 void create_phonemes(std::vector<Phoneme> & phonemes,

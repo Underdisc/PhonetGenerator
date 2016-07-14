@@ -52,17 +52,14 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   A reference to the vector of consonant Phonmes being used for the Phonet.
 \param vowels
   A reference to the vector of vowel Phonemes being used for the Phonet.
-\param seed
-  The seed being used for the generator.
 */
 /*****************************************************************************/
 Phonet::Phonet(const std::vector<Phoneme> & consonants,
-               const std::vector<Phoneme> & vowels,
-               unsigned seed):
+               const std::vector<Phoneme> & vowels):
 m_min_length(2),
 m_max_length(10)
 {
-  generate(consonants, vowels, seed);
+  generate(consonants, vowels);
 }
 
 /*****************************************************************************/
@@ -105,33 +102,29 @@ Phonet::~Phonet()
   The Vector of consonant Phonemes being used for the generation.
 \param vowels
   The vector of vowel Phonemes being used for the gneneration.
-\param seed
-  The seed used for the random number generator.
 */
 /*****************************************************************************/
 
 void Phonet::generate(const std::vector<Phoneme> & consonants,
-                      const std::vector<Phoneme> & vowels,
-                      unsigned seed)
+                      const std::vector<Phoneme> & vowels)
 {
-  srand(seed);
   m_phonemes.clear();
 
-  unsigned length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
+  size_t length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
   Phoneme_Type type = static_cast<Phoneme_Type>(rand() % 2);
 
   while(length)
   {
     if(type)
     {
-      unsigned vowel_index = rand() % vowels.size();
+      size_t vowel_index = rand() % vowels.size();
       m_phonemes.push_back(vowels[vowel_index]);
       type = static_cast<Phoneme_Type>(0);
 
     }
     else
     {
-      unsigned consonant_index = rand() % consonants.size();
+      size_t consonant_index = rand() % consonants.size();
       m_phonemes.push_back(consonants[consonant_index]);
       type = static_cast<Phoneme_Type>(1);
     }

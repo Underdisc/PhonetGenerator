@@ -48,6 +48,8 @@
 
 \deprecated
     - Phonets now use Phoneme class instead of std::string.
+    - Phonets no longer need a seed for generation. To seed to generation,
+      srand() and give a seed.
 
 \bug
     - The generation is terrible.
@@ -58,12 +60,10 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
-           unsigned);
+    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &);
     Phonet(const std::vector<Phoneme> &);
     ~Phonet();
-    void generate(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
-                  unsigned);
+    void generate(const std::vector<Phoneme> &, const std::vector<Phoneme> &);
     void print_phonet() const;
     void print_pronunciation() const;
     void print_spelling() const;
@@ -74,9 +74,9 @@ class Phonet
     // Phonet.
     std::vector<Phoneme> m_phonemes;
     //! The minimum number of Phonemes that this Phonet can contain.
-    unsigned m_min_length;
+    size_t m_min_length;
     //! The maximum number of Phonemes that this Phonet can contain.
-    unsigned m_max_length;
+    size_t m_max_length;
 
 /*****************************************************************************/
 /*!

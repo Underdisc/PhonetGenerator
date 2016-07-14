@@ -20,6 +20,7 @@
 #include <iostream> // cout, endl
 #include <vector>   // vector:c
 #include <string>   // string:c
+#include <cstdlib>  // srand
 #include <ctime>    // time
 
 #include "../header/Phoneme.h"   // Phoneme:c
@@ -32,19 +33,11 @@
   Program start function. Currently responsible for reading in data and
   generating a phonet for printing.
 
-\param argc
-  The number of arguments provided on the command line (includes executable
-  name)
-
-\param argv
-  An array of character arrays containing the strings provided on the command
-  line.
-
 \return Main Int
 */
 /*****************************************************************************/
 
-int main(int argc, char ** argv)
+int main()
 {
   std::vector<std::string> str_vowels;
   std::vector<std::string> str_consonants;
@@ -61,8 +54,11 @@ int main(int argc, char ** argv)
   create_phonemes(phonemes_vowels,
                   str_vowels);
 
+
+  srand((unsigned)time(0));
+
   Phonet phonet;
-  phonet.generate(phonemes_consonants, phonemes_vowels, (unsigned)time(0));
+  phonet.generate(phonemes_consonants, phonemes_vowels);
   std::cout << phonet << std::endl;
   phonet.print_pronunciation();
   std::cout << std::endl;

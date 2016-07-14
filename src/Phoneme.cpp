@@ -24,6 +24,7 @@
 
 #include "../header/Phoneme.h" // Phoneme:c
 
+#include <cstdlib>  // rand
 #include <iostream> // cout
 
 /*****************************************************************************/
@@ -111,7 +112,7 @@ void Phoneme::print_pronunciation() const
 /*****************************************************************************/
 void Phoneme::print_spelling() const
 {
-  std::cout << m_spellings.at(0);
+  std::cout <<  m_spellings.at(rand() % m_spellings.size());
 }
 
 /*****************************************************************************/

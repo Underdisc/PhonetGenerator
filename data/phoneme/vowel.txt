@@ -1,10 +1,10 @@
 /a/:h<a>t:a,au
-/e/:b<e>d:e,ea
+/e/:b<e>d:e,eh,ea
 /i/:<i>f:i
-/o/:h<o>t:o,a,au,aw,ough
+/o/:h<o>t:o,a,aw,au,ough
 /u/:<u>p:u,o
-/ay/:b<a>con:a,ay,ai,ey,ei
-/ee/:m<e>:e,ea,ee,ey,ie,y
+/ay/:b<a>con:ay,ai,ey,a,ei
+/ee/:m<e>:ee,ie,ea,e,y,ey
 /igh/:f<i>nd:i,igh,y,ie
 /ou/:b<oa>t:o,oa,ou,ow
 /ew/:ch<ew>:u,ew
