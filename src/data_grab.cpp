@@ -18,7 +18,7 @@
     - create_phonemes
 
 \deprecated
-    create_phonemes parameters changed.
+    - create_phonemes parameters changed.
 */
 /*****************************************************************************/
 
