@@ -23,6 +23,7 @@
 #include <cstdlib>  // srand
 #include <ctime>    // time
 
+#include "../header/Options.h"   // Options:c
 #include "../header/Phoneme.h"   // Phoneme:c
 #include "../header/Phonet.h"    // Phonet:c
 #include "../header/data_grab.h" // read_file, create_phonemes
@@ -33,11 +34,15 @@
   Program start function. Currently responsible for reading in data and
   generating a phonet for printing.
 
-\return Main Int
+\param argc
+  The number of arguments provided on the command line.
+\param argv
+  The strings of the arguments provided on the command line.
+
+\return main int
 */
 /*****************************************************************************/
-
-int main()
+int main(int argc, char ** argv)
 {
   std::vector<std::string> str_vowels;
   std::vector<std::string> str_consonants;
@@ -54,16 +59,23 @@ int main()
   create_phonemes(phonemes_vowels,
                   str_vowels);
 
+  Options options(argc, argv);
 
-  srand((unsigned)time(0));
-
-  Phonet phonet;
-  phonet.generate(phonemes_consonants, phonemes_vowels);
-  std::cout << phonet << std::endl;
-  phonet.print_pronunciation();
-  std::cout << std::endl;
-  phonet.print_spelling();
-  std::cout << std::endl;
-
+  for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
+  {
+    Phonet phonet;
+    phonet.generate(phonemes_consonants, phonemes_vowels);
+    std::cout << phonet << std::endl;
+    if(options.get_pronunciation())
+    {
+      phonet.print_pronunciation();
+      std::cout << std::endl;
+    }
+    for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
+    {
+      phonet.print_spelling();
+      std::cout << std::endl;
+    }
+  }
   return 0;
 }

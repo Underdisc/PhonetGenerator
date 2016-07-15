@@ -16,9 +16,9 @@
 /w/:<w>et:w,wh
 /y/:<y>es:y,i
 /z/:<z>ip:z,zz,ze,s,se,x
-/th-/:<th>in:th,
-/th+/:<th>is:th,
-/ng/:ri<ng>:ng,ngue,
+/th-/:<th>in:th
+/th+/:<th>is:th
+/ng/:ri<ng>:ng,ngue
 /sh/:<sh>ip:sh,ss,ch,ti,ci
 /ch/:<ch>ip:ch,tch
 /zh/:gara<ge>:ge,si
