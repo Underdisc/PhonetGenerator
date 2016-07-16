@@ -19,6 +19,7 @@
     - get_num_words
     - get_num_spellings
     - get_pronunciation
+    - print_help
 */
 /*****************************************************************************/
 
@@ -84,7 +85,7 @@ void Options::parse_options(int argc, char ** argv)
 {
   bool error = false;
   int opt;
-  while((opt = getopt(argc, argv, ":n:x:w:s:pr:")) != -1)
+  while((opt = getopt(argc, argv, ":n:x:w:s:pr:h")) != -1)
   {
     switch (opt)
     {
@@ -106,6 +107,9 @@ void Options::parse_options(int argc, char ** argv)
       case 'r':
         m_seed = (unsigned)atoi(optarg);
         break;
+      case 'h':
+        print_help();
+        break;
       case '?':
         std::cout << "The provided option [" << (char)optopt
                   << "] is not an option." << std::endl;
@@ -125,6 +129,31 @@ void Options::parse_options(int argc, char ** argv)
     std::cout << "Use -h or --help to see all options "
               << "and how they are used." << std::endl;
   }
+}
+
+/*****************************************************************************/
+/*!
+\brief
+  Prints out the help interface for the PhonetGenerator's switches.
+*/
+/*****************************************************************************/
+void Options::print_help()
+{
+  std::cout << "-n [number]: Decide the minimum number of phonemes in a phonet."
+            << std::endl;
+  std::cout << "-x [number]: Decide the maximum number of phonemes in a phonet."
+            << std::endl;
+  std::cout << "-w [number]: Decide the number of phonets that are generated."
+            << std::endl;
+  std::cout << "-s [number]: Decide the number of suggested spellings that are "
+            << "generated for each phonet."
+            << std::endl;
+  std::cout << "-p         : Print the pronunciation of the phonet."
+            << std::endl;
+  std::cout << "-r [number]: Provide the seed used for the randomization. If "
+            << "a seed is not provided, the time is used as an alternative."
+            << std::endl;
+  std::cout << "-h         : Prints this." << std::endl;
 }
 
 /*****************************************************************************/

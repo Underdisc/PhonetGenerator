@@ -23,6 +23,7 @@
     Operations include:
     - Creating the Options object.
     - Getting all members of the Options object through getters.
+    - Printing out the help interface for the PhonetGenerator's switches.
 
 \deprecated
     - Nothing
@@ -44,6 +45,7 @@ class Options
     unsigned get_seed();
   private:
     void parse_options(int, char **);
+    void print_help();
     //! The minimum number of Phonemes that can be in a Phonet.
     size_t m_min_length;
     //! The maximum number of Phonemes that can be in a Phonet.
