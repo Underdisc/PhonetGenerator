@@ -29,5 +29,5 @@ Version List
 - Basic implementation versions
 - 0.70 - Contains a very basic generation method. The method used in this version switches back and forth between vowel and consonant phonemes. This version generates interesting phonets, however, it does not have an option interface
 - 0.80 - Suggests a single spelling for any Phonet generated.
-- **0.90** - Added an options interface for the PhonetGenerator.
+- 0.90 - Added an options interface for the PhonetGenerator.
 - **0.91** - Added more options and organized the output.
