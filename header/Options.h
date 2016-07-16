@@ -41,6 +41,7 @@ class Options
     unsigned get_num_words();
     unsigned get_num_spellings();
     bool get_pronunciation();
+    unsigned get_seed();
   private:
     void parse_options(int, char **);
     //! The minimum number of Phonemes that can be in a Phonet.

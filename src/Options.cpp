@@ -52,9 +52,9 @@
 */
 /*****************************************************************************/
 Options::Options(int argc, char ** argv): m_min_length(2), m_max_length(10),
-m_num_words(1), m_num_spellings(1), m_pronunciation(false),
-m_seed((unsigned)time(0))
+m_num_words(1), m_num_spellings(1), m_pronunciation(false)
 {
+  m_seed = (unsigned)time(0);
   parse_options(argc, argv);
 }
 
@@ -89,29 +89,22 @@ void Options::parse_options(int argc, char ** argv)
     switch (opt)
     {
       case 'n':
-        std::cout << "n (min_length) provided" << std::endl;
         m_min_length = atoi(optarg);
         break;
       case 'x':
-        std::cout << "x (max_length) provided" << std::endl;
         m_max_length = atoi(optarg);
         break;
       case 'w':
-        std::cout << "w (num_words) provided" << std::endl;
         m_num_words = atoi(optarg);
         break;
       case 's':
-        std::cout << "s (num_spellings) provided" << std::endl;
         m_num_spellings = atoi(optarg);
         break;
       case 'p':
-        std::cout << "p (pronunciation) provided" << std::endl;
         m_pronunciation = true;
         break;
       case 'r':
-        std::cout << "r (seed) provided" << std::endl;
         m_seed = (unsigned)atoi(optarg);
-        srand(m_seed);
         break;
       case '?':
         std::cout << "The provided option [" << (char)optopt
@@ -188,3 +181,5 @@ unsigned Options::get_num_spellings() { return m_num_spellings; }
 */
 /*****************************************************************************/
 bool Options::get_pronunciation() { return m_pronunciation; }
+
+unsigned Options::get_seed() { return m_seed; }

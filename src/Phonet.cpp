@@ -52,12 +52,17 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   A reference to the vector of consonant Phonmes being used for the Phonet.
 \param vowels
   A reference to the vector of vowel Phonemes being used for the Phonet.
+\param min_length
+  The minimum length the Phonet could have when generated.
+\param max_length
+  The maximum length the Phonet could have when generated.
 */
 /*****************************************************************************/
 Phonet::Phonet(const std::vector<Phoneme> & consonants,
-               const std::vector<Phoneme> & vowels):
-m_min_length(2),
-m_max_length(10)
+               const std::vector<Phoneme> & vowels,
+               const size_t min_length, const size_t max_length):
+m_min_length(min_length),
+m_max_length(max_length)
 {
   generate(consonants, vowels);
 }
@@ -175,7 +180,7 @@ void Phonet::print_pronunciation() const
       ++phoneme;
       if(phoneme == m_phonemes.end())
         break;
-      std::cout << std::endl;
+      std::cout << " : ";
       (*phoneme).print_pronunciation();
     }
   }

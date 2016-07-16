@@ -60,7 +60,8 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &);
+    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
+           const size_t, const size_t);
     Phonet(const std::vector<Phoneme> &);
     ~Phonet();
     void generate(const std::vector<Phoneme> &, const std::vector<Phoneme> &);

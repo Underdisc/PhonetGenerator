@@ -61,21 +61,30 @@ int main(int argc, char ** argv)
 
   Options options(argc, argv);
 
+  srand(options.get_seed());
+
   for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
   {
-    Phonet phonet;
-    phonet.generate(phonemes_consonants, phonemes_vowels);
+    std::cout << "==============================" << std::endl;
+    Phonet phonet(phonemes_consonants, phonemes_vowels,
+                  options.get_min_length(), options.get_max_length());
     std::cout << phonet << std::endl;
     if(options.get_pronunciation())
     {
+      std::cout << "------------------------------" << std::endl;
       phonet.print_pronunciation();
       std::cout << std::endl;
     }
-    for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
+    if(options.get_num_spellings() > 0)
     {
-      phonet.print_spelling();
-      std::cout << std::endl;
+      std::cout << "------------------------------" << std::endl;
+      for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
+      {
+        phonet.print_spelling();
+        std::cout << std::endl;
+      }
     }
   }
+  std::cout << "==============================" << std::endl;
   return 0;
 }
