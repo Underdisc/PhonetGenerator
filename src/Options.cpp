@@ -85,50 +85,43 @@ void Options::parse_options(int argc, char ** argv)
 {
   bool error = false;
   int opt;
-  while((opt = getopt(argc, argv, ":n:x:w:s:pr:h")) != -1)
+  while(1)
   {
+    int opt_index = 0;
+    static struct option long_options[] =
+    {
+      {"minimum-length", required_argument, NULL, 'n'},
+      {"maximum-length", required_argument, NULL, 'x'},
+      {"words",          required_argument, NULL, 'w'},
+      {"spellings",      required_argument, NULL, 's'},
+      {"pronunciation",  no_argument,       NULL, 'p'},
+      {"seed",           required_argument, NULL, 'r'},
+      {"help",           no_argument,       NULL, 'h'}
+    };
+
+    opt = getopt_long(argc, argv, ":n:x:w:s:ps:h", long_options, &opt_index);
+    if(opt == -1)
+      break;
     switch (opt)
     {
-      case 'n':
-        m_min_length = atoi(optarg);
-        break;
-      case 'x':
-        m_max_length = atoi(optarg);
-        break;
-      case 'w':
-        m_num_words = atoi(optarg);
-        break;
-      case 's':
-        m_num_spellings = atoi(optarg);
-        break;
-      case 'p':
-        m_pronunciation = true;
-        break;
-      case 'r':
-        m_seed = (unsigned)atoi(optarg);
-        break;
-      case 'h':
-        print_help();
-        break;
-      case '?':
-        std::cout << "The provided option [" << (char)optopt
-                  << "] is not an option." << std::endl;
-        error = true;
-        break;
-      case ':':
-        std::cout << "The provided option [" << (char)optopt
-                  << "] requires an argument." << std::endl;
-        error = true;
-        break;
+      case 'n': m_min_length = atoi(optarg);     break;
+      case 'x': m_max_length = atoi(optarg);     break;
+      case 'w': m_num_words = atoi(optarg);      break;
+      case 's': m_num_spellings = atoi(optarg);  break;
+      case 'p': m_pronunciation = true;          break;
+      case 'r': m_seed = (unsigned)atoi(optarg); break;
+      case 'h': print_help();                    break;
+      case '?': std::cout << "The provided option [" << (char)optopt
+                          << "] is not an option." << std::endl;
+                error = true; break;
+      case ':': std::cout << "The provided option [" << (char)optopt
+                          << "] requires an argument." << std::endl;
+                error = true; break;
     }
   }
-  // Use an exception
-  // This exception should also handle invalid files
   if(error)
-  {
-    std::cout << "Use -h or --help to see all options "
-              << "and how they are used." << std::endl;
-  }
+    std::cout << "Use -h or --help to see all options and how they are used."
+              << std::endl;
 }
 
 /*****************************************************************************/
@@ -139,21 +132,27 @@ void Options::parse_options(int argc, char ** argv)
 /*****************************************************************************/
 void Options::print_help()
 {
-  std::cout << "-n [number]: Decide the minimum number of phonemes in a phonet."
-            << std::endl;
-  std::cout << "-x [number]: Decide the maximum number of phonemes in a phonet."
-            << std::endl;
-  std::cout << "-w [number]: Decide the number of phonets that are generated."
-            << std::endl;
-  std::cout << "-s [number]: Decide the number of suggested spellings that are "
-            << "generated for each phonet."
-            << std::endl;
-  std::cout << "-p         : Print the pronunciation of the phonet."
-            << std::endl;
-  std::cout << "-r [number]: Provide the seed used for the randomization. If "
-            << "a seed is not provided, the time is used as an alternative."
-            << std::endl;
-  std::cout << "-h         : Prints this." << std::endl;
+  std::cout << "--minimum-length [number] or -n [number]: "
+            << "Decide the minimum number of phonemes in a phonet."
+            << std::endl
+            << "--maximum-length [number] or -x [number]: "
+            << "Decide the maximum number of phonemes in a phonet."
+            << std::endl
+            << "--words [number] or -w [number]         : "
+            << "Decide the number of phonets that are generated."
+            << std::endl
+            << "-s [number]                             : "
+            << "Decide the number of spellings generated for each phonet."
+            << std::endl
+            << "-p                                      : "
+            << "Print the pronunciation of the phonet."
+            << std::endl
+            << "--seed [number] or -r [number]          : "
+            << "Provide the seed used for the randomization. "
+            << "If a seed is not provided, the time is used as an alternative."
+            << std::endl
+            << "-h                                      : "
+            << "Prints this." << std::endl;
 }
 
 /*****************************************************************************/
