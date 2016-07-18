@@ -12,8 +12,16 @@
 
 \par
     Functions Include:
-    - read_file
     - main
+
+\bug
+  Negative numbers for min and max lengths are not accounted for.
+\bug
+  Min length being greater than the max length is not accounted for.
+\bug
+  Program does not terminate on file error.
+\bug
+  Program does not terminate on switch error.
 */
 /*****************************************************************************/
 
