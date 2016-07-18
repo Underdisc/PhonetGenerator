@@ -44,40 +44,36 @@
 /*****************************************************************************/
 int main(int argc, char ** argv)
 {
+  // Getting all data
   std::vector<std::string> str_vowels;
   std::vector<std::string> str_consonants;
-
   read_file(str_consonants, "../data/phoneme/consonant.txt");
   read_file(str_vowels, "../data/phoneme/vowel.txt");
-
-
   std::vector<Phoneme> phonemes_consonants;
   std::vector<Phoneme> phonemes_vowels;
-
   create_phonemes(phonemes_consonants,
                   str_consonants);
   create_phonemes(phonemes_vowels,
                   str_vowels);
-
+  // Applying options
   Options options(argc, argv);
-
   srand(options.get_seed());
-
+  // Printing Phonets
   for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
   {
-    std::cout << "==============================" << std::endl;
+    std::cout << "=========={Phonet}" << std::endl;
     Phonet phonet(phonemes_consonants, phonemes_vowels,
                   options.get_min_length(), options.get_max_length());
     std::cout << phonet << std::endl;
     if(options.get_pronunciation())
     {
-      std::cout << "------------------------------" << std::endl;
+      std::cout << "----------[Pronunciation]" << std::endl;
       phonet.print_pronunciation();
       std::cout << std::endl;
     }
     if(options.get_num_spellings() > 0)
     {
-      std::cout << "------------------------------" << std::endl;
+      std::cout << "----------[Spelling]" << std::endl;
       for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
       {
         phonet.print_spelling();
@@ -85,6 +81,5 @@ int main(int argc, char ** argv)
       }
     }
   }
-  std::cout << "==============================" << std::endl;
   return 0;
 }
