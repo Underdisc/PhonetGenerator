@@ -99,7 +99,7 @@ void Options::parse_options(int argc, char ** argv)
       {"help",           no_argument,       NULL, 'h'}
     };
 
-    opt = getopt_long(argc, argv, ":n:x:w:s:ps:h", long_options, &opt_index);
+    opt = getopt_long(argc, argv, ":n:x:w:s:ps:r:h", long_options, &opt_index);
     if(opt == -1)
       break;
     switch (opt)
