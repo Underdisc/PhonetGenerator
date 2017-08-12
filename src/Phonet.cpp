@@ -58,13 +58,12 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   The maximum length the Phonet could have when generated.
 */
 /*****************************************************************************/
-Phonet::Phonet(const std::vector<Phoneme> & consonants,
-               const std::vector<Phoneme> & vowels,
+Phonet::Phonet(const std::vector<Phoneme> &  phonemes,
                const size_t min_length, const size_t max_length):
 m_min_length(min_length),
 m_max_length(max_length)
 {
-  generate(consonants, vowels);
+  generate(phonemes);
 }
 
 /*****************************************************************************/
@@ -80,7 +79,7 @@ m_max_length(max_length)
 */
 /*****************************************************************************/
 
-Phonet::Phonet(const std::vector<Phoneme> & phonemes):
+Phonet::Phonet(const std::vector<const Phoneme *> & phonemes):
 m_min_length(phonemes.size()),
 m_max_length(phonemes.size())
 {
@@ -99,40 +98,26 @@ Phonet::~Phonet()
 /*****************************************************************************/
 /*!
 \brief
-  Given a vector of both consonant and vowel Phonemes and a seed, a randomized
-  phonet will be generated with the rules of the English phonetic alphabet.
-  This is currently pretty screwy.
-
-\param consonants
-  The Vector of consonant Phonemes being used for the generation.
-\param vowels
-  The vector of vowel Phonemes being used for the gneneration.
+  Given a vector of all the existing phonemes being used, a randomized
+  phonet will be generated.
 */
 /*****************************************************************************/
 
-void Phonet::generate(const std::vector<Phoneme> & consonants,
-                      const std::vector<Phoneme> & vowels)
+void Phonet::generate(const std::vector<Phoneme> & phonemes)
 {
   m_phonemes.clear();
-
   size_t length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
-  Phoneme_Type type = static_cast<Phoneme_Type>(rand() % 2);
-
+  if(length > 0)
+  {
+    long unsigned phoneme_index = rand() % phonemes.size();
+    m_phonemes.push_back(&(phonemes[phoneme_index]));
+    --length;
+  }
+  else
+    return;
   while(length)
   {
-    if(type)
-    {
-      size_t vowel_index = rand() % vowels.size();
-      m_phonemes.push_back(vowels[vowel_index]);
-      type = static_cast<Phoneme_Type>(0);
-
-    }
-    else
-    {
-      size_t consonant_index = rand() % consonants.size();
-      m_phonemes.push_back(consonants[consonant_index]);
-      type = static_cast<Phoneme_Type>(1);
-    }
+    m_phonemes.push_back(m_phonemes.back()->get_following_phoneme());
     --length;
   }
 }
@@ -145,18 +130,17 @@ void Phonet::generate(const std::vector<Phoneme> & consonants,
 /*****************************************************************************/
 void Phonet::print_phonet() const
 {
-  std::vector<Phoneme>::const_iterator phoneme;
-  phoneme = m_phonemes.begin();
-  if(phoneme != m_phonemes.end())
+  std::vector<const Phoneme *>::const_iterator it = m_phonemes.begin();
+  std::vector<const Phoneme *>::const_iterator it_e = m_phonemes.end();
+  if(it == it_e)
+    return;
+  std::cout << *(*it);
+  while(it != it_e)
   {
-    std::cout << *phoneme;
-    while(true)
-    {
-      ++phoneme;
-      if(phoneme == m_phonemes.end())
-        break;
-      std::cout << ":" << *phoneme;
-    }
+    ++it;
+    if(it == it_e)
+      break;
+    std::cout << ":" << *(*it);
   }
 }
 
@@ -170,19 +154,18 @@ void Phonet::print_phonet() const
 /*****************************************************************************/
 void Phonet::print_pronunciation() const
 {
-  std::vector<Phoneme>::const_iterator phoneme;
-  phoneme = m_phonemes.begin();
-  if(phoneme != m_phonemes.end())
+  std::vector<const Phoneme *>::const_iterator it = m_phonemes.begin();
+  std::vector<const Phoneme *>::const_iterator it_e = m_phonemes.end();
+  if(it == it_e)
+    return;
+  (**it).print_pronunciation();
+  while(it != it_e)
   {
-    (*phoneme).print_pronunciation();
-    while(true)
-    {
-      ++phoneme;
-      if(phoneme == m_phonemes.end())
-        break;
-      std::cout << " : ";
-      (*phoneme).print_pronunciation();
-    }
+    ++it;
+    if(it == it_e)
+      break;
+    std::cout << " : ";
+    (**it).print_pronunciation();
   }
 }
 
@@ -194,9 +177,10 @@ void Phonet::print_pronunciation() const
 /*****************************************************************************/
 void Phonet::print_spelling() const
 {
-  std::vector<Phoneme>::const_iterator phoneme;
-  for(phoneme = m_phonemes.begin(); phoneme != m_phonemes.end(); ++phoneme)
-    (*phoneme).print_spelling();
+  std::vector<const Phoneme *>::const_iterator it = m_phonemes.begin();
+  std::vector<const Phoneme *>::const_iterator it_e = m_phonemes.end();
+  for(; it != it_e; ++it)
+    (**it).print_spelling();
 }
 
 /*****************************************************************************/

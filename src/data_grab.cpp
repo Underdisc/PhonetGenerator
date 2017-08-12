@@ -29,6 +29,8 @@
 
 #include "../header/Phoneme.h" // Phoneme:c
 
+#include "../header/data_grab.h"
+
 /*****************************************************************************/
 /*!
 \brief
@@ -58,113 +60,90 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
   }
 }
 
-/*****************************************************************************/
-/*!
-\brief
-  Parses a line of string data by putting each set of string data between a
-  specified delimiter into a vector. If the delimiter does not appear in the
-  string provided, the vector will contain one element consisting of the whole
-  string.
-\par
-  Example
-  If this was the data passed into the parse function (this/is/data), and the
-  delimiter passed to the parse function was '/', the storage string vector
-  would be filled with the follwing three elements.
-  - this
-  - is
-  - data
-
-\param storage
-  The parsed string data will be stored in this provided vector.
-\param data
-  This is the string that will be parsed and processed to be stored in the
-  storage vector.
-\param delimiter
-  This is the delimiter that will be used to separate one vector element from
-  another in the data string.
-*/
-/*****************************************************************************/
-void parse (std::vector<std::string> & storage, const std::string & data,
-            const char delimiter)
-{
-  size_t start = 0;
-  size_t end = 0;
-  end = data.find(delimiter, start);
-
-  while(end != std::string::npos)
-  {
-    storage.push_back(data.substr(start, end - start));
-    start = end + 1;
-    end = data.find(delimiter, start);
-  }
-  storage.push_back(data.substr(start, data.size()));
-}
-
-/*****************************************************************************/
-/*!
-\brief
-  Given a line of phoneme file data, this function will seperate the different
-  elemnts of the phoneme data in order to more easily create phonemes from the
-  file data.
-
-\param phoneme
-  The actual phoneme will be stored here.
-\param pronunciation
-  The string specifying the sound of the phoneme will be stored here.
-\param spellings
-  The string containing all of the possible spellings for the phoneme will be
-  stored here.
-\param data
-  This is the string that contains the data from file to be parsed and put into
-  the other string containers.
-*/
-/*****************************************************************************/
-void parse_phoneme_data(std::string & phoneme, std::string & pronunciation,
-  std::string & spellings, const std::string & data)
-  {
-    size_t start = 0;
-    size_t end = 0;
-
-    end = data.find(':');
-    phoneme = data.substr(start, end - start);
-
-    start = end + 1;
-    end = data.find(':',start);
-    pronunciation = data.substr(start, end - start);
-
-    start = end + 1;
-    end = data.size();
-    spellings = data.substr(start, end - start);
-  }
-
-/*****************************************************************************/
-/*!
-\brief
-  A helper function that takes in the string data read from file and puts the
-  data into Phonemes in order to use the Phonemes within a Phonet.
-
-\param phonemes
-  All the Phoneme data will be stored in this vector of Phonemes.
-\param data
-  A vector of strings containing the phoneme data that was read from file.
-*/
-/*****************************************************************************/
 void create_phonemes(std::vector<Phoneme> & phonemes,
                      const std::vector<std::string> & data)
 {
-  std::vector<std::string>::const_iterator phoneme_data;
+  // the indicies that rules begin
+  std::vector<size_t> rule_starts;
+  extract_phoneme_data(phonemes, data, rule_starts);
+  extract_rule_data(phonemes, data, rule_starts);
+}
 
-  for(phoneme_data = data.begin(); phoneme_data != data.end(); ++phoneme_data)
+inline void extract_phoneme_data(std::vector<Phoneme> & phonemes,
+                                const std::vector<std::string> & data,
+                                std::vector<size_t> & rule_starts)
+{
+  std::vector<std::string>::const_iterator it = data.begin();
+  std::vector<std::string>::const_iterator it_e = data.end();
+  for(; it != it_e; ++it)
   {
     std::string phoneme;
-    std::string pronunciation;
-    std::string spellings_str;
-    parse_phoneme_data(phoneme, pronunciation, spellings_str, (*phoneme_data));
-
-    std::vector<std::string> spellings;
-    parse(spellings, spellings_str, (char)',');
-
-    Phoneme new_phoneme(phoneme, pronunciation, spellings);
-    phonemes.push_back(new_phoneme);
+    std::string example;
+    std::string spellings;
+    // start and end of a substring
+    size_t start = 0;
+    size_t end = 0;
+    // getting phoneme string
+    end = it->find((char)':', start);
+    phoneme = it->substr(start, end - start);
+    // getting example string
+    start = end + 1;
+    end = it->find((char)':', start);
+    example = it->substr(start, end - start);
+    // getting spellings string
+    start = end + 1;
+    end = it->find((char)':', start);
+    spellings = it->substr(start, end - start);
+    rule_starts.push_back(end + 1);
+    // creating the new phoneme
+    phonemes.push_back(Phoneme(phoneme, example, spellings));
   }
+}
+
+inline void extract_rule_data(std::vector<Phoneme> & phonemes,
+                              const std::vector<std::string> & data,
+                              std::vector<size_t> & rule_starts)
+{
+  unsigned current_phoneme = 0;
+  while(current_phoneme < phonemes.size())
+  {
+
+    size_t start = rule_starts[current_phoneme];
+    size_t end = rule_starts[current_phoneme];
+
+    if(start >= data.size())
+      continue;
+
+    end = data[current_phoneme].find(',', start);
+    while(end != std::string::npos)
+    {
+      // clean this up a little
+      std::string new_rule_str = data[current_phoneme].substr(start, end - start);
+      Phoneme * new_rule = find_phoneme(phonemes, new_rule_str);
+      if(new_rule)
+        phonemes[current_phoneme].add_rule(new_rule);
+
+      start = end + 1;
+      end = data[current_phoneme].find(',', start);
+    }
+    std::string new_rule_str = data[current_phoneme].substr(start, data.size() - start);
+    Phoneme * new_rule = find_phoneme(phonemes, new_rule_str);
+    if(new_rule)
+      phonemes[current_phoneme].add_rule(new_rule);
+    ++current_phoneme;
+  }
+}
+
+Phoneme * find_phoneme(std::vector<Phoneme> & phonemes,
+                       const std::string & phoneme_string)
+{
+  std::vector<Phoneme>::iterator it = phonemes.begin();
+  std::vector<Phoneme>::iterator it_e = phonemes.end();
+  for(; it != it_e; ++it)
+  {
+    if((*it) == phoneme_string)
+      return &(*it);
+  }
+  // YOU SHOULD PROBABLY THROUGH AN EXCEPTION OR SOMEthing HERE
+  return NULL;
 }

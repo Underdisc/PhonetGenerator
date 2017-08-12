@@ -34,7 +34,7 @@
   object are constructed as empty strings.
 */
 /*****************************************************************************/
-Phoneme::Phoneme(): m_phoneme(0), m_example(0), m_spellings(0)
+Phoneme::Phoneme(): m_phoneme(), m_example(), m_spellings(), m_rules()
 {
 }
 
@@ -52,9 +52,22 @@ Phoneme::Phoneme(): m_phoneme(0), m_example(0), m_spellings(0)
 */
 /*****************************************************************************/
 Phoneme::Phoneme(const std::string & phoneme, const std::string & example,
-                 const std::vector<std::string> & spellings)
-: m_phoneme(phoneme), m_example(example), m_spellings(spellings)
+                 const std::string & spellings)
+: m_phoneme(phoneme), m_example(example), m_spellings(), m_rules()
 {
+  // parsing the spellings string
+  size_t start = 0;
+  size_t end = 0;
+  end = spellings.find((char)',', start);
+  if(spellings.size() <= 0)
+    return;
+  while(end != std::string::npos)
+  {
+    m_spellings.push_back(spellings.substr(start, end - start));
+    start = end + 1;
+    end = spellings.find((char)',', start);
+  }
+  m_spellings.push_back(spellings.substr(start, spellings.size() - start));
 }
 
 /*****************************************************************************/
@@ -81,6 +94,28 @@ Phoneme::Phoneme(const Phoneme & other)
 Phoneme::~Phoneme()
 {
 }
+
+/*****************************************************************************/
+/*!
+\brief
+  Adds a new rule to this phoneme. In other words, the rule added will be a
+  phoneme that can come after this phoneme.
+
+\param new_rule
+  The new phoneme that is being used as a rule.
+*/
+/*****************************************************************************/
+void Phoneme::add_rule(const Phoneme * new_rule)
+{
+  m_rules.push_back(new_rule);
+}
+
+const Phoneme * Phoneme::get_following_phoneme() const
+{
+  size_t rule_index = rand() % m_rules.size();
+  return m_rules[rule_index];
+}
+
 
 /*****************************************************************************/
 /*!
@@ -113,6 +148,29 @@ void Phoneme::print_pronunciation() const
 void Phoneme::print_spelling() const
 {
   std::cout <<  m_spellings.at(rand() % m_spellings.size());
+}
+
+bool Phoneme::operator==(const std::string & phoneme) const
+{
+  if(m_phoneme.size() != phoneme.size())
+    return false;
+  unsigned index = 0;
+  while(m_phoneme[index] == phoneme[index]){
+    ++index;
+    if(m_phoneme.size() == index)
+      return true;
+  }
+  return false;
+}
+
+void Phoneme::print_rules() const
+{
+  size_t num_rules = m_rules.size();
+  for(size_t cur_rule = 0; cur_rule < num_rules; ++cur_rule)
+  {
+    m_rules[cur_rule]->print_phoneme();
+    std::cout << std::endl;
+  }
 }
 
 /*****************************************************************************/

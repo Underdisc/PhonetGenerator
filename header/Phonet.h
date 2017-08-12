@@ -60,11 +60,10 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(const std::vector<Phoneme> &, const std::vector<Phoneme> &,
-           const size_t, const size_t);
-    Phonet(const std::vector<Phoneme> &);
+    Phonet(const std::vector<Phoneme> & phonemes, const size_t, const size_t);
+    Phonet(const std::vector<const Phoneme *> &);
     ~Phonet();
-    void generate(const std::vector<Phoneme> &, const std::vector<Phoneme> &);
+    void generate(const std::vector<Phoneme> &);
     void print_phonet() const;
     void print_pronunciation() const;
     void print_spelling() const;
@@ -73,30 +72,12 @@ class Phonet
   private:
     //! The vector containing all of the Phonemes responsible for creating the
     // Phonet.
-    std::vector<Phoneme> m_phonemes;
+    std::vector<const Phoneme *> m_phonemes;
     //! The minimum number of Phonemes that this Phonet can contain.
     size_t m_min_length;
     //! The maximum number of Phonemes that this Phonet can contain.
     size_t m_max_length;
 
-/*****************************************************************************/
-/*!
-\enum Phoneme_Type
-\brief
-  A Phoneme can only be two types, a consonant or a vowel. This is used to
-  segment to the phoneme types in order to generate the Phonets
-
-\par
-    Members
-    - CONSONANT
-    - VOWEL
-*/
-/*****************************************************************************/
-    enum Phoneme_Type
-    {
-      CONSONANT = 0,
-      VOWEL = 1
-    };
 };
 
 #endif

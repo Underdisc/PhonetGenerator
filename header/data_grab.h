@@ -12,9 +12,13 @@
 /*****************************************************************************/
 
 void read_file(std::vector<std::string> & vector, const char * file_name);
-void parse (std::vector<std::string> & storage, const std::string & data,
-            const char delimiter);
-void parse_phoneme_data(std::string & phoneme, std::string & pronunciation,
-                   std::string & spellings, const std::string & data);
 void create_phonemes(std::vector<Phoneme> & phonemes,
                      const std::vector<std::string> & data);
+void extract_phoneme_data(std::vector<Phoneme> & phonemes,
+                          const std::vector<std::string> & data,
+                          std::vector<size_t> & rule_starts);
+void extract_rule_data(std::vector<Phoneme> & phonemes,
+                       const std::vector<std::string> & data,
+                       std::vector<size_t> & rule_starts);
+Phoneme * find_phoneme(std::vector<Phoneme> & phonemes,
+                       const std::string & phoneme_string);

@@ -55,12 +55,16 @@ class Phoneme
   public:
     Phoneme();
     Phoneme(const std::string &, const std::string &,
-            const std::vector<std::string> &);
+            const std::string &);
     Phoneme(const Phoneme &);
     ~Phoneme();
+    void add_rule(const Phoneme *);
+    const Phoneme * get_following_phoneme() const;
     void print_phoneme() const;
     void print_pronunciation() const;
     void print_spelling() const;
+    void print_rules() const;
+    bool operator==(const std::string & phoneme) const;
     Phoneme & operator=(const Phoneme &);
     friend std::ostream & operator<<(std::ostream &, const Phoneme &);
 
@@ -72,6 +76,11 @@ class Phoneme
     //! This vector contains strings the represent possible ways of spelling out
     // a Phoneme.
     std::vector<std::string> m_spellings;
+    //! The phonemes that are allowed to follow this phoneme during the
+    // random phonet generation.
+    std::vector<const Phoneme *> m_rules;
+
+
 };
 
 #endif
