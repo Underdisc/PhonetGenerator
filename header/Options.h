@@ -10,6 +10,8 @@
 */
 /*****************************************************************************/
 
+#include <string>
+
 /*****************************************************************************/
 /*!
 \class Options
@@ -43,6 +45,7 @@ class Options
     unsigned get_num_spellings();
     bool get_pronunciation();
     unsigned get_seed();
+    const std::string & get_phoneme_file();
   private:
     void parse_options(int, char **);
     void print_help();
@@ -58,4 +61,6 @@ class Options
     bool m_pronunciation;
     //! The seed used for the PhonetGenerator's randomization.
     unsigned m_seed;
+    //! The file that all the phoneme data will be loaded from.
+    std::string m_phoneme_file;
 };

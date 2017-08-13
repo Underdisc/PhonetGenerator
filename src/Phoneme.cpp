@@ -110,6 +110,14 @@ void Phoneme::add_rule(const Phoneme * new_rule)
   m_rules.push_back(new_rule);
 }
 
+/*****************************************************************************/
+/*!
+\brief
+  Gets a phoneme that can follow this phoneme.
+
+\return A pointer to the random phoneme that can follow this one.
+*/
+/*****************************************************************************/
 const Phoneme * Phoneme::get_following_phoneme() const
 {
   size_t rule_index = rand() % m_rules.size();
@@ -150,6 +158,19 @@ void Phoneme::print_spelling() const
   std::cout <<  m_spellings.at(rand() % m_spellings.size());
 }
 
+/*****************************************************************************/
+/*!
+\brief
+  Tests for equality between a phoneme and a string that contains a phoneme.
+  Just an explicit string comparison.
+
+\param phoneme
+  The phoneme string that will be checked for equality with this phoneme.
+
+
+\return If the string represents this phoneme, true.
+*/
+/*****************************************************************************/
 bool Phoneme::operator==(const std::string & phoneme) const
 {
   if(m_phoneme.size() != phoneme.size())
@@ -163,6 +184,14 @@ bool Phoneme::operator==(const std::string & phoneme) const
   return false;
 }
 
+
+/*****************************************************************************/
+/*!
+\brief
+  Prints out all of the phonemes that can follow this phoneme. Not very useful
+  except for debugging.
+*/
+/*****************************************************************************/
 void Phoneme::print_rules() const
 {
   size_t num_rules = m_rules.size();

@@ -45,6 +45,7 @@
     - m_num_spellings = 0
     - m_pronunciation = false
     - m_seed = time(0)
+    - m_phoneme_file = "config/english_vcvc.phoneme"
 
 \param argc
   The argc from main.
@@ -53,7 +54,8 @@
 */
 /*****************************************************************************/
 Options::Options(int argc, char ** argv): m_min_length(2), m_max_length(10),
-m_num_words(1), m_num_spellings(0), m_pronunciation(false)
+m_num_words(1), m_num_spellings(0), m_pronunciation(false),
+m_phoneme_file("config/english_vcvc.phoneme")
 {
   m_seed = (unsigned)time(0);
   parse_options(argc, argv);
@@ -96,10 +98,11 @@ void Options::parse_options(int argc, char ** argv)
       {"spellings",      required_argument, NULL, 's'},
       {"pronunciation",  no_argument,       NULL, 'p'},
       {"seed",           required_argument, NULL, 'r'},
+      {"file",           required_argument, NULL, 'f'},
       {"help",           no_argument,       NULL, 'h'}
     };
 
-    opt = getopt_long(argc, argv, ":n:x:w:s:ps:r:h", long_options, &opt_index);
+    opt = getopt_long(argc, argv, ":n:x:w:s:ps:r:f:h", long_options, &opt_index);
     if(opt == -1)
       break;
     switch (opt)
@@ -110,6 +113,7 @@ void Options::parse_options(int argc, char ** argv)
       case 's': m_num_spellings = atoi(optarg);  break;
       case 'p': m_pronunciation = true;          break;
       case 'r': m_seed = (unsigned)atoi(optarg); break;
+      case 'f': m_phoneme_file = optarg;         break;
       case 'h': print_help();                    break;
       case '?': std::cout << "The provided option [" << (char)optopt
                           << "] is not an option." << std::endl;
@@ -210,4 +214,22 @@ unsigned Options::get_num_spellings() { return m_num_spellings; }
 /*****************************************************************************/
 bool Options::get_pronunciation() { return m_pronunciation; }
 
+/*****************************************************************************/
+/*!
+\brief
+  Gets the value of the random seed.
+
+\return The random seed value.
+*/
+/*****************************************************************************/
 unsigned Options::get_seed() { return m_seed; }
+
+/*****************************************************************************/
+/*!
+\brief
+  Returns the name of the phoneme data file to be used by the generator.
+
+\return The phoneme config file name.
+*/
+/*****************************************************************************/
+const std::string & Options::get_phoneme_file() { return m_phoneme_file; }

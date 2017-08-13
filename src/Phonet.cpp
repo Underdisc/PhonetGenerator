@@ -48,10 +48,8 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   object creation. The Phonet will begin with a min length of 2 and a max length
   of ten.
 
-\param consonants
-  A reference to the vector of consonant Phonmes being used for the Phonet.
-\param vowels
-  A reference to the vector of vowel Phonemes being used for the Phonet.
+\param phonemes
+  The vector of phonemes that will be used to generate a random phonet.
 \param min_length
   The minimum length the Phonet could have when generated.
 \param max_length
@@ -107,6 +105,7 @@ void Phonet::generate(const std::vector<Phoneme> & phonemes)
 {
   m_phonemes.clear();
   size_t length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
+  // picking first phoneme
   if(length > 0)
   {
     long unsigned phoneme_index = rand() % phonemes.size();
@@ -115,6 +114,7 @@ void Phonet::generate(const std::vector<Phoneme> & phonemes)
   }
   else
     return;
+  // picking remaining phonemes
   while(length)
   {
     m_phonemes.push_back(m_phonemes.back()->get_following_phoneme());
@@ -138,6 +138,7 @@ void Phonet::print_phonet() const
   while(it != it_e)
   {
     ++it;
+    // skipping colon print
     if(it == it_e)
       break;
     std::cout << ":" << *(*it);

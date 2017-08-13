@@ -52,31 +52,15 @@
 /*****************************************************************************/
 int main(int argc, char ** argv)
 {
-  // Getting all data
-  std::vector<std::string> str_phonemes;
-  read_file(str_phonemes, "../data/phoneme/english_vcvc.txt");
-  std::vector<Phoneme> phonemes;
-  create_phonemes(phonemes, str_phonemes);
   // Applying options
   Options options(argc, argv);
+  // Getting all data
+  std::vector<std::string> str_phonemes;
+  read_file(str_phonemes, options.get_phoneme_file().c_str());
+  std::vector<Phoneme> phonemes;
+  create_phonemes(phonemes, str_phonemes);
   srand(options.get_seed());
-  // Printing Phonets
-
-  // for debug
-  /*unsigned i = 1;
-  std::vector<Phoneme>::iterator it = phonemes.begin();
-  std::vector<Phoneme>::iterator it_e = phonemes.end();
-  for(; it != it_e; ++it)
-  {
-    std::cout << "---";
-    it->print_phoneme();
-    std::cout << std::endl;
-    it->get_following_phoneme()->print_phoneme();
-    std::cout << std::endl;
-    ++i;
-  }*/
-
-
+  // Creating and Printing Phonets
   for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
   {
     std::cout << "=========={Phonet}" << std::endl;
