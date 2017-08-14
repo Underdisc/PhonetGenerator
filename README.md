@@ -9,7 +9,7 @@ At first, this generator could only generate words for the English language, but
 
 ## Running
 
-You can either build it from source or check the release folder. The each of the zips in the release folder contain the configuration files needed to run the program.
+You can either build it from source or check the release folder. Each of the zips in the release folder contain the configuration files needed to run the program.
 
 If you want to build from source, do this from the root of the repository.
 I am using version 3.6.2 of cmake.
@@ -21,7 +21,15 @@ cmake ../
 make
 ```
 
-After that, just make sure that the config directory is located in the same directory as the program.
+Alternatively, since this project is very small.
+
+```
+mkdir build
+cd build
+g++ ../src/main.cpp ../src/Options.cpp ../src/Phoneme.cpp ../src/PhonemePool.cpp ../src/Phonet.cpp ../src/utility.cpp -o ptgen.exe
+```
+
+After that, just make sure that the config directory is located in the same directory as the program before running it.
 
 ## Options
 - --maximum-length [number or -n [number]: Decide the minimum number of phonemes in a phonet.
