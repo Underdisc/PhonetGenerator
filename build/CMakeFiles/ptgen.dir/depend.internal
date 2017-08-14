@@ -7,17 +7,22 @@ CMakeFiles/ptgen.dir/src/Options.cpp.o
 CMakeFiles/ptgen.dir/src/Phoneme.cpp.o
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp
+CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/utility.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp
 CMakeFiles/ptgen.dir/src/Phonet.cpp.o
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp
-CMakeFiles/ptgen.dir/src/data_grab.cpp.o
- /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
- /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/data_grab.h
- /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/data_grab.cpp
 CMakeFiles/ptgen.dir/src/main.cpp.o
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Options.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
- /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/data_grab.h
  /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp
+CMakeFiles/ptgen.dir/src/utility.cpp.o
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/utility.h
+ /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp

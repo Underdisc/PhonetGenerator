@@ -15,7 +15,8 @@
 #define Phonet_H
 ///////////////////////////////////////////////////////////////////////////////
 
-#include "../header/Phoneme.h" //Phoneme:c
+#include "../header/Phoneme.h"     //Phoneme:c
+#include "../header/PhonemePool.h" //PhonemePool:c
 
 #include <string>   // string:c
 #include <vector>   // vector:c
@@ -60,10 +61,10 @@ class Phonet
 {
   public:
     Phonet();
-    Phonet(const std::vector<Phoneme> & phonemes, const size_t, const size_t);
+    Phonet(const PhonemePool & pool, const size_t, const size_t);
     Phonet(const std::vector<const Phoneme *> &);
     ~Phonet();
-    void generate(const std::vector<Phoneme> &);
+    void generate(const PhonemePool & pool);
     void print_phonet() const;
     void print_pronunciation() const;
     void print_spelling() const;

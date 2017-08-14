@@ -31,10 +31,10 @@
 #include <cstdlib>  // srand
 #include <ctime>    // time
 
-#include "../header/Options.h"   // Options:c
-#include "../header/Phoneme.h"   // Phoneme:c
-#include "../header/Phonet.h"    // Phonet:c
-#include "../header/data_grab.h" // read_file, create_phonemes
+#include "../header/Options.h"     // Options:c
+#include "../header/Phoneme.h"     // Phoneme:c
+#include "../header/Phonet.h"      // Phonet:c
+#include "../header/PhonemePool.h" // PhonemePool:c
 
 /*****************************************************************************/
 /*!
@@ -54,17 +54,14 @@ int main(int argc, char ** argv)
 {
   // Applying options
   Options options(argc, argv);
-  // Getting all data
-  std::vector<std::string> str_phonemes;
-  read_file(str_phonemes, options.get_phoneme_file().c_str());
-  std::vector<Phoneme> phonemes;
-  create_phonemes(phonemes, str_phonemes);
+  // Creating the pool of phonemes
+  PhonemePool pool(options.get_phoneme_file().c_str());
   srand(options.get_seed());
   // Creating and Printing Phonets
   for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
   {
     std::cout << "=========={Phonet}" << std::endl;
-    Phonet phonet(phonemes, options.get_min_length(), options.get_max_length());
+    Phonet phonet(pool, options.get_min_length(), options.get_max_length());
     std::cout << phonet << std::endl;
     if(options.get_pronunciation())
     {

@@ -56,12 +56,12 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   The maximum length the Phonet could have when generated.
 */
 /*****************************************************************************/
-Phonet::Phonet(const std::vector<Phoneme> &  phonemes,
+Phonet::Phonet(const PhonemePool & pool,
                const size_t min_length, const size_t max_length):
 m_min_length(min_length),
 m_max_length(max_length)
 {
-  generate(phonemes);
+  generate(pool);
 }
 
 /*****************************************************************************/
@@ -101,15 +101,14 @@ Phonet::~Phonet()
 */
 /*****************************************************************************/
 
-void Phonet::generate(const std::vector<Phoneme> & phonemes)
+void Phonet::generate(const PhonemePool & pool)
 {
   m_phonemes.clear();
   size_t length = (rand() % (m_max_length - m_min_length + 1)) + m_min_length;
   // picking first phoneme
   if(length > 0)
   {
-    long unsigned phoneme_index = rand() % phonemes.size();
-    m_phonemes.push_back(&(phonemes[phoneme_index]));
+    m_phonemes.push_back(pool.get_phoneme());
     --length;
   }
   else

@@ -7,17 +7,22 @@ CMakeFiles/ptgen.dir/src/Options.cpp.o: ../src/Options.cpp
 CMakeFiles/ptgen.dir/src/Phoneme.cpp.o: ../header/Phoneme.h
 CMakeFiles/ptgen.dir/src/Phoneme.cpp.o: ../src/Phoneme.cpp
 
+CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: ../header/Phoneme.h
+CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: ../header/PhonemePool.h
+CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: ../header/utility.h
+CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: ../src/PhonemePool.cpp
+
 CMakeFiles/ptgen.dir/src/Phonet.cpp.o: ../header/Phoneme.h
+CMakeFiles/ptgen.dir/src/Phonet.cpp.o: ../header/PhonemePool.h
 CMakeFiles/ptgen.dir/src/Phonet.cpp.o: ../header/Phonet.h
 CMakeFiles/ptgen.dir/src/Phonet.cpp.o: ../src/Phonet.cpp
 
-CMakeFiles/ptgen.dir/src/data_grab.cpp.o: ../header/Phoneme.h
-CMakeFiles/ptgen.dir/src/data_grab.cpp.o: ../header/data_grab.h
-CMakeFiles/ptgen.dir/src/data_grab.cpp.o: ../src/data_grab.cpp
-
 CMakeFiles/ptgen.dir/src/main.cpp.o: ../header/Options.h
 CMakeFiles/ptgen.dir/src/main.cpp.o: ../header/Phoneme.h
+CMakeFiles/ptgen.dir/src/main.cpp.o: ../header/PhonemePool.h
 CMakeFiles/ptgen.dir/src/main.cpp.o: ../header/Phonet.h
-CMakeFiles/ptgen.dir/src/main.cpp.o: ../header/data_grab.h
 CMakeFiles/ptgen.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/ptgen.dir/src/utility.cpp.o: ../header/utility.h
+CMakeFiles/ptgen.dir/src/utility.cpp.o: ../src/utility.cpp
 

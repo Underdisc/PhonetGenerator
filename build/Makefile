@@ -177,6 +177,33 @@ src/Phoneme.cpp.s:
 	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phoneme.cpp.s
 .PHONY : src/Phoneme.cpp.s
 
+src/PhonemePool.o: src/PhonemePool.cpp.o
+
+.PHONY : src/PhonemePool.o
+
+# target to build an object file
+src/PhonemePool.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o
+.PHONY : src/PhonemePool.cpp.o
+
+src/PhonemePool.i: src/PhonemePool.cpp.i
+
+.PHONY : src/PhonemePool.i
+
+# target to preprocess a source file
+src/PhonemePool.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.i
+.PHONY : src/PhonemePool.cpp.i
+
+src/PhonemePool.s: src/PhonemePool.cpp.s
+
+.PHONY : src/PhonemePool.s
+
+# target to generate assembly for a file
+src/PhonemePool.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.s
+.PHONY : src/PhonemePool.cpp.s
+
 src/Phonet.o: src/Phonet.cpp.o
 
 .PHONY : src/Phonet.o
@@ -203,33 +230,6 @@ src/Phonet.s: src/Phonet.cpp.s
 src/Phonet.cpp.s:
 	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phonet.cpp.s
 .PHONY : src/Phonet.cpp.s
-
-src/data_grab.o: src/data_grab.cpp.o
-
-.PHONY : src/data_grab.o
-
-# target to build an object file
-src/data_grab.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/data_grab.cpp.o
-.PHONY : src/data_grab.cpp.o
-
-src/data_grab.i: src/data_grab.cpp.i
-
-.PHONY : src/data_grab.i
-
-# target to preprocess a source file
-src/data_grab.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/data_grab.cpp.i
-.PHONY : src/data_grab.cpp.i
-
-src/data_grab.s: src/data_grab.cpp.s
-
-.PHONY : src/data_grab.s
-
-# target to generate assembly for a file
-src/data_grab.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/data_grab.cpp.s
-.PHONY : src/data_grab.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -258,6 +258,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/utility.o: src/utility.cpp.o
+
+.PHONY : src/utility.o
+
+# target to build an object file
+src/utility.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.o
+.PHONY : src/utility.cpp.o
+
+src/utility.i: src/utility.cpp.i
+
+.PHONY : src/utility.i
+
+# target to preprocess a source file
+src/utility.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.i
+.PHONY : src/utility.cpp.i
+
+src/utility.s: src/utility.cpp.s
+
+.PHONY : src/utility.s
+
+# target to generate assembly for a file
+src/utility.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.s
+.PHONY : src/utility.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,15 +300,18 @@ help:
 	@echo "... src/Phoneme.o"
 	@echo "... src/Phoneme.i"
 	@echo "... src/Phoneme.s"
+	@echo "... src/PhonemePool.o"
+	@echo "... src/PhonemePool.i"
+	@echo "... src/PhonemePool.s"
 	@echo "... src/Phonet.o"
 	@echo "... src/Phonet.i"
 	@echo "... src/Phonet.s"
-	@echo "... src/data_grab.o"
-	@echo "... src/data_grab.i"
-	@echo "... src/data_grab.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/utility.o"
+	@echo "... src/utility.i"
+	@echo "... src/utility.s"
 .PHONY : help
 
 
