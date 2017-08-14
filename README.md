@@ -59,10 +59,10 @@ Each line is split into four different sections that are separated with a colon 
 
 This is what those four sections look like on line 13 for the /s/ phoneme.
 
-1. s
-2. <s>un
-3. s,se,ss,c,ce,sc
-4. a,e,i,o,u,ā,ē,ī,ō,ū,oo,ōō,ow,oy,ar,ār,ir,or,ur,l,w
+1. `s`
+2. `<s>un`
+3. `s,se,ss,c,ce,sc`
+4. `a,e,i,o,u,ā,ē,ī,ō,ū,oo,ōō,ow,oy,ar,ār,ir,or,ur,l,w`
 
 Of these four lines, the most special line is the fourth. These are phonemes that can come after the /s/ phoneme when used in a word. For example, you can have a /s/:/e/ phoneme combination in which /e/ follows /s/ to make a phonet that sounds like the word see. Notice how **e** is the second phoneme in the fourth section for the /s/ phoneme.
 
@@ -72,3 +72,5 @@ Besides that, there is nothing else to these files. The order in which you put t
 - Each of the four sections must be separated by a colon `:`.
 - Each delimiter within the sections must be separated by a comma `,`. This does not apply to sections 1 and 2. The identifier and pronunciation sections only take one parameter each.
 - No spaces.
+
+Once you have created your file, just use the `--file` or `-f` option to specify the file path when running the program. The program will always use english_default.phoneme unless otherwise specified.
