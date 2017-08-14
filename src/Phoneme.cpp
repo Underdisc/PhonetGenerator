@@ -133,7 +133,7 @@ const Phoneme * Phoneme::get_following_phoneme() const
 /*****************************************************************************/
 void Phoneme::print_phoneme() const
 {
-  std::cout << m_phoneme;
+  std::cout << '/' << m_phoneme << '/';
 }
 
 /*****************************************************************************/
@@ -242,6 +242,6 @@ Phoneme & Phoneme::operator=(const Phoneme & rhs)
 /*****************************************************************************/
 std::ostream & operator<<(std::ostream & os, const Phoneme & rhs)
 {
-  os << rhs.m_phoneme;
+  os << '/' << rhs.m_phoneme << '/';
   return os;
 }
