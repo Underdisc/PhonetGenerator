@@ -55,7 +55,7 @@
 /*****************************************************************************/
 Options::Options(int argc, char ** argv): m_min_length(2), m_max_length(10),
 m_num_words(1), m_num_spellings(0), m_pronunciation(false),
-m_phoneme_file("config/english_vcvc.phoneme")
+m_phoneme_file("config/english_default.phoneme")
 {
   m_seed = (unsigned)time(0);
   parse_options(argc, argv);
@@ -154,6 +154,10 @@ void Options::print_help()
             << "--seed [number] or -r [number]          : "
             << "Provide the seed used for the randomization. "
             << "If a seed is not provided, the time is used as an alternative."
+            << std::endl
+            << "--file [path] or -f [path]              : "
+            << "Choose the phoneme file that will be used for the phoneme data "
+            << "used by the generator."
             << std::endl
             << "-h                                      : "
             << "Prints this." << std::endl;
