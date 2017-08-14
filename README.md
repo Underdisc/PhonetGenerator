@@ -7,7 +7,13 @@ At first, this generator could only generate words for the English language, but
 
 *If there isn't a configuration file for the language you are looking for, feel free to contribute and add a configuration. A tutorial on how to create and use the configuration files is located at the bottom of this page.*
 
-**Compile and Run**
+## Running
+
+You can either build it from source or check the release folder. The each of the zips in the release folder contain the configuration files needed to run the program.
+
+If you want to build from source, do this from the root of the repository.
+I am using version 3.6.2 of cmake.
+
 ```
 mkdir build
 cd build
@@ -15,7 +21,7 @@ cmake ../
 make
 ```
 
-All current documentation can be found in documentation/html/index.html
+After that, just make sure that the config directory is located in the same directory as the program.
 
 ## Options
 - --maximum-length [number or -n [number]: Decide the minimum number of phonemes in a phonet.
@@ -64,7 +70,7 @@ This is what those four sections look like on line 13 for the /s/ phoneme.
 3. `s,se,ss,c,ce,sc`
 4. `a,e,i,o,u,ā,ē,ī,ō,ū,oo,ōō,ow,oy,ar,ār,ir,or,ur,l,w`
 
-Of these four lines, the most special line is the fourth. These are phonemes that can come after the /s/ phoneme when used in a word. For example, you can have a /s/:/e/ phoneme combination in which /e/ follows /s/ to make a phonet that sounds like the word see. Notice how **e** is the second phoneme in the fourth section for the /s/ phoneme.
+Of these four lines, the most special line is the fourth. These are phonemes that can come after the /s/ phoneme when used in a word. For example, you can have a /s/:/e/ phoneme combination in which /e/ follows /s/ to make a phonet that sounds like the word see. Notice how **e** is the second phoneme in the fourth section for the /s/ phoneme. Also notice how there is no **s** in the fourth section for the /t/ phoneme. An /s/ sound just doesn't make much sense after a /t/ sound.
 
 Besides that, there is nothing else to these files. The order in which you put the phonemes does not matter. These are the most important things.
 
