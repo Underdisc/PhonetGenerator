@@ -37,7 +37,12 @@ void read_file(std::vector<std::string> & vector, const char * file_name)
 {
   std::ifstream file(file_name);
   if(!file.is_open())
-    std::cout << "File [" << file_name << "] Not Opened" << std::endl;
+  {
+    std::string error("File [");
+    error.append(file_name);
+    error.append("] could not be opened");
+    throw(error);
+  }
   else
   {
     std::string line;

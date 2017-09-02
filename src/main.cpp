@@ -52,32 +52,42 @@
 /*****************************************************************************/
 int main(int argc, char ** argv)
 {
-  // Applying options
-  Options options(argc, argv);
-  // Creating the pool of phonemes
-  PhonemePool pool(options.get_phoneme_file().c_str());
-  srand(options.get_seed());
-  // Creating and Printing Phonets
-  for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
+  try
   {
-    std::cout << "=========={Phonet}" << std::endl;
-    Phonet phonet(pool, options.get_min_length(), options.get_max_length());
-    std::cout << phonet << std::endl;
-    if(options.get_pronunciation())
+    // Applying options
+    Options options(argc, argv);
+    // Creating the pool of phonemes
+    PhonemePool pool(options.get_phoneme_file().c_str());
+    srand(options.get_seed());
+    // Creating and Printing Phonets
+    for(unsigned i_phonet = 0; i_phonet < options.get_num_words(); ++i_phonet)
     {
-      std::cout << "----------[Pronunciation]" << std::endl;
-      phonet.print_pronunciation();
-      std::cout << std::endl;
-    }
-    if(options.get_num_spellings() > 0)
-    {
-      std::cout << "----------[Spelling]" << std::endl;
-      for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
+      std::cout << "=========={Phonet}" << std::endl;
+      Phonet phonet(pool, options.get_min_length(), options.get_max_length());
+      std::cout << phonet << std::endl;
+      if(options.get_pronunciation())
       {
-        phonet.print_spelling();
+        std::cout << "----------[Pronunciation]" << std::endl;
+        phonet.print_pronunciation();
         std::cout << std::endl;
       }
+      if(options.get_num_spellings() > 0)
+      {
+        std::cout << "----------[Spelling]" << std::endl;
+        for(unsigned i_spelling = 0; i_spelling < options.get_num_spellings(); ++i_spelling)
+        {
+          phonet.print_spelling();
+          std::cout << std::endl;
+        }
+      }
     }
+  }
+  catch(const std::string & error)
+  {
+    std::cerr << ">> ERROR >>" << std::endl
+              << error << std::endl
+              << "<< ERROR <<"<< std::endl;
+
   }
   return 0;
 }

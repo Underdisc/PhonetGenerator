@@ -18,6 +18,8 @@
 
 #include "../header/PhonemePool.h"
 
+#define NUL '\0'
+
 /*****************************************************************************/
 /*!
 \brief
@@ -71,6 +73,7 @@ inline
 void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
                                        std::vector<size_t> & rule_starts)
 {
+  unsigned current_line = 1;
   std::vector<std::string>::const_iterator it = data.begin();
   std::vector<std::string>::const_iterator it_e = data.end();
   for(; it != it_e; ++it)
@@ -81,9 +84,23 @@ void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
     // start and end of a substring
     size_t start = 0;
     size_t end = 0;
+    size_t distance = 0;
     // getting phoneme string
     end = it->find((char)':', start);
-    phoneme = it->substr(start, end - start);
+    distance = end - start;
+    if(distance == 0)
+    {
+      char line_buffer[10];
+      int length;
+      length = sprintf(line_buffer, "%d", current_line);
+      line_buffer[length] = NUL;
+
+      std::string error("Line ");
+      error.append(line_buffer);
+      error.append("\nMissing phoneme name");
+      throw(error);
+    }
+    phoneme = it->substr(start, distance);
     // getting example string
     start = end + 1;
     end = it->find((char)':', start);
@@ -95,6 +112,7 @@ void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
     rule_starts.push_back(end + 1);
     // creating the new phoneme
     m_phonemes.push_back(Phoneme(phoneme, example, spellings));
+    ++current_line;
   }
 }
 
