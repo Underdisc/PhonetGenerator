@@ -10,9 +10,10 @@
 */
 /*****************************************************************************/
 
-#include <cstdlib> // rand
-#include <vector>  // vector:c
-#include <string>  // string:c
+#include <cstdlib>  // rand
+#include <vector>   // vector:c
+#include <string>   // string:c
+#include <iostream> // cout
 
 #include "../header/utility.h" // read_file
 
@@ -30,15 +31,23 @@
   The path to the file which all the phoneme data will be read from.
 */
 /*****************************************************************************/
-PhonemePool::PhonemePool(const char * phoneme_file)
+PhonemePool::PhonemePool(const char * phoneme_file) : m_phonemes(),
+  m_read_success(false)
 {
   std::vector<std::string> phoneme_data;
   read_file(phoneme_data, phoneme_file);
 
   std::vector<size_t> rule_starts;
-  extract_phoneme_data(phoneme_data, rule_starts);
-  extract_rule_data(phoneme_data, rule_starts);
-
+  try
+  {
+    extract_phoneme_data(phoneme_data, rule_starts);
+    extract_rule_data(phoneme_data, rule_starts);
+    m_read_success = true;
+  }
+  catch(const std::string & error)
+  {
+    std::cout << "Error | " << error << std::endl;
+  }
 }
 
 /*****************************************************************************/
@@ -53,6 +62,19 @@ const Phoneme * PhonemePool::get_phoneme() const
 {
   long unsigned phoneme_index = rand() % m_phonemes.size();
   return &(m_phonemes[phoneme_index]);
+}
+
+/*****************************************************************************/
+/*!
+\brief
+  Returns true if the phoneme file was successfully read.
+
+\return Look at brief.
+*/
+/*****************************************************************************/
+bool PhonemePool::read_success() const
+{
+  return m_read_success;
 }
 
 /*****************************************************************************/
@@ -76,8 +98,14 @@ void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
   unsigned current_line = 1;
   std::vector<std::string>::const_iterator it = data.begin();
   std::vector<std::string>::const_iterator it_e = data.end();
+
   for(; it != it_e; ++it)
   {
+    // saving line number into a string for errors
+    char line_num_buffer[10];
+    sprintf(line_num_buffer, "%d", current_line);
+    std::string line_number(line_num_buffer);
+    // extracting phonemes
     std::string phoneme;
     std::string example;
     std::string spellings;
@@ -87,27 +115,39 @@ void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
     size_t distance = 0;
     // getting phoneme string
     end = it->find((char)':', start);
-    distance = end - start;
-    if(distance == 0)
+    // make sure there is an ending colon for the identifier
+    if(end == std::string::npos)
     {
-      char line_buffer[10];
-      int length;
-      length = sprintf(line_buffer, "%d", current_line);
-      line_buffer[length] = NUL;
-
-      std::string error("Line ");
-      error.append(line_buffer);
-      error.append("\nMissing phoneme name");
+      std::string error("Line : ");
+      error.append(line_number);
+      error.append(" | Ending ':' for phoneme identifier not found");
       throw(error);
     }
+    distance = end - start;
     phoneme = it->substr(start, distance);
-    // getting example string
+    // getting example pronunciation
     start = end + 1;
     end = it->find((char)':', start);
+    // make sure there is an ending colon for the pronunciation
+    if(end == std::string::npos)
+    {
+      std::string error("Line : ");
+      error.append(line_number);
+      error.append(" | Ending ':' for phoneme pronunciation not found");
+      throw(error);
+    }
     example = it->substr(start, end - start);
     // getting spellings string
     start = end + 1;
     end = it->find((char)':', start);
+    // make sure there is an ending colon for the spellings
+    if(end == std::string::npos)
+    {
+      std::string error("Line : ");
+      error.append(line_number);
+      error.append(" | Ending ':' for phoneme spellings not found");
+      throw(error);
+    }
     spellings = it->substr(start, end - start);
     rule_starts.push_back(end + 1);
     // creating the new phoneme

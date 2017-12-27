@@ -46,9 +46,10 @@ class Options
     bool get_pronunciation();
     unsigned get_seed();
     const std::string & get_phoneme_file();
+    bool get_help();
+    static void print_help();
   private:
     void parse_options(int, char **);
-    void print_help();
     //! The minimum number of Phonemes that can be in a Phonet.
     size_t m_min_length;
     //! The maximum number of Phonemes that can be in a Phonet.
@@ -63,4 +64,6 @@ class Options
     unsigned m_seed;
     //! The file that all the phoneme data will be loaded from.
     std::string m_phoneme_file;
+    //! Used to identify whether the help text should be printed.
+    bool m_help;
 };

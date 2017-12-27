@@ -33,6 +33,7 @@ class PhonemePool
   public:
     PhonemePool(const char * phoneme_file);
     const Phoneme * get_phoneme() const;
+    bool read_success() const;
   private:
     void extract_phoneme_data(const std::vector<std::string> & data,
                               std::vector<size_t> & rule_starts);
@@ -41,6 +42,8 @@ class PhonemePool
     Phoneme * find_phoneme(const std::string & phoneme_string);
     //! The vector of phonemes that the PhonemePool holds.
     std::vector<Phoneme> m_phonemes;
+    //! Identifies whether the phoneme file was successfully read or not.
+    bool m_read_success;
 };
 
 #endif

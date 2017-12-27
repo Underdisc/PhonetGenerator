@@ -55,7 +55,7 @@
 /*****************************************************************************/
 Options::Options(int argc, char ** argv): m_min_length(2), m_max_length(10),
 m_num_words(1), m_num_spellings(0), m_pronunciation(false),
-m_phoneme_file("config/english_default.phoneme")
+m_phoneme_file("config/english_default.phoneme"), m_help(false)
 {
   m_seed = (unsigned)time(0);
   parse_options(argc, argv);
@@ -114,7 +114,7 @@ void Options::parse_options(int argc, char ** argv)
       case 'p': m_pronunciation = true;          break;
       case 'r': m_seed = (unsigned)atoi(optarg); break;
       case 'f': m_phoneme_file = optarg;         break;
-      case 'h': print_help();                    break;
+      case 'h': m_help = true;                   break;
       case '?': std::cout << "The provided option [" << (char)optopt
                           << "] is not an option." << std::endl;
                 error = true; break;
@@ -237,3 +237,13 @@ unsigned Options::get_seed() { return m_seed; }
 */
 /*****************************************************************************/
 const std::string & Options::get_phoneme_file() { return m_phoneme_file; }
+
+/*****************************************************************************/
+/*!
+\brief
+  Returns whether the help text should be printed or not.
+
+\return If the help text should be printed, true.
+*/
+/*****************************************************************************/
+bool Options::get_help() { return m_help; }
