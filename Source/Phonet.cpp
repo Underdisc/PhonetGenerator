@@ -25,10 +25,9 @@
 */
 /*****************************************************************************/
 
-#include "../header/Phonet.h" // Phonet:c
-
 #include <cstdlib>  // srand, rand
 #include <iostream> // cout, endl
+#include "../header/Phonet.h" // Phonet:c
 
 /*****************************************************************************/
 /*!
@@ -116,8 +115,17 @@ void Phonet::generate(const PhonemePool & pool)
   // picking remaining phonemes
   while(length)
   {
-    m_phonemes.push_back(m_phonemes.back()->get_following_phoneme());
-    --length;
+    const Phoneme * next_phoneme = m_phonemes.back()->get_following_phoneme();
+    // make sure that the phoneme has at least one following phoneme
+    if(!next_phoneme)
+    {
+      length = 0;
+    }
+    else
+    {
+      m_phonemes.push_back(m_phonemes.back()->get_following_phoneme());
+      --length;
+    }
   }
 }
 

@@ -27,8 +27,7 @@
 #include <ctime>    // time
 #include <cstdlib>  // srand, atoi
 #include <iostream> // cout, endl
-
-#include "../header/Options.h" //Options:h
+#include "../Header/Options.h" //Options:h
 
 /*****************************************************************************/
 /*!

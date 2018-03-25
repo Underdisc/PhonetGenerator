@@ -14,10 +14,8 @@
 #include <vector>   // vector:c
 #include <string>   // string:c
 #include <iostream> // cout
-
-#include "../header/utility.h" // read_file
-
-#include "../header/PhonemePool.h"
+#include "../Header/utility.h" // read_file
+#include "../Header/PhonemePool.h"
 
 #define NUL '\0'
 
@@ -151,7 +149,7 @@ void PhonemePool::extract_phoneme_data(const std::vector<std::string> & data,
     spellings = it->substr(start, end - start);
     rule_starts.push_back(end + 1);
     // creating the new phoneme
-    m_phonemes.push_back(Phoneme(phoneme, example, spellings));
+    m_phonemes.push_back(Phoneme(phoneme, example, spellings, current_line));
     ++current_line;
   }
 }
@@ -178,9 +176,11 @@ void PhonemePool::extract_rule_data(const std::vector<std::string> & data,
 
     size_t start = rule_starts[current_phoneme];
     size_t end = rule_starts[current_phoneme];
-
     if(start >= data.size())
+    {
+      ++current_phoneme;
       continue;
+    }
 
     end = data[current_phoneme].find(',', start);
     while(end != std::string::npos)

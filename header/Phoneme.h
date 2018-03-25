@@ -55,7 +55,7 @@ class Phoneme
   public:
     Phoneme();
     Phoneme(const std::string &, const std::string &,
-            const std::string &);
+            const std::string &, unsigned id);
     Phoneme(const Phoneme &);
     ~Phoneme();
     void add_rule(const Phoneme *);
@@ -79,6 +79,9 @@ class Phoneme
     //! The phonemes that are allowed to follow this phoneme during the
     // random phonet generation.
     std::vector<const Phoneme *> m_rules;
+    //! The phonemes identifier. This corresponds directly to the line number
+    // the phoneme was on in the .phoneme file.
+    unsigned m_id;
 
 
 };

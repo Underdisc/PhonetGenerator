@@ -22,10 +22,9 @@
 */
 /*****************************************************************************/
 
-#include "../header/Phoneme.h" // Phoneme:c
-
 #include <cstdlib>  // rand
 #include <iostream> // cout
+#include "../Header/Phoneme.h" // Phoneme:c
 
 /*****************************************************************************/
 /*!
@@ -52,9 +51,20 @@ Phoneme::Phoneme(): m_phoneme(), m_example(), m_spellings(), m_rules()
 */
 /*****************************************************************************/
 Phoneme::Phoneme(const std::string & phoneme, const std::string & example,
-                 const std::string & spellings)
-: m_phoneme(phoneme), m_example(example), m_spellings(), m_rules()
+                 const std::string & spellings, unsigned id)
+: m_phoneme(phoneme), m_example(example), m_spellings(), m_rules(), m_id(id)
 {
+  // print warning for empty strings
+  if(m_phoneme.size() == 0)
+  {
+    std::cout << "Warning | Line : "
+      << m_id << " | Phoneme is an empty string" << std::endl;
+  }
+  if(m_example.size() == 0)
+  {
+    std::cout << "Warning | Line : "
+      << m_id << " | Pronunciation example is an empty string" << std::endl;
+  }
   // parsing the spellings string
   size_t start = 0;
   size_t end = 0;
@@ -115,11 +125,14 @@ void Phoneme::add_rule(const Phoneme * new_rule)
 \brief
   Gets a phoneme that can follow this phoneme.
 
-\return A pointer to the random phoneme that can follow this one.
+\return A pointer to a random phoneme that can follow this one. If there are
+  no phonemes that can follow this phoneme, NULL is returned.
 */
 /*****************************************************************************/
 const Phoneme * Phoneme::get_following_phoneme() const
 {
+  if(m_rules.size() == 0)
+    return NULL;
   size_t rule_index = rand() % m_rules.size();
   return m_rules[rule_index];
 }

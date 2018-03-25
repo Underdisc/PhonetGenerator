@@ -18,8 +18,8 @@
 #include <fstream>  // ifstream
 #include <vector>   // vector:c
 #include <string>   // string:c
+#include "../Header/utility.h"
 
-#include "../header/utility.h"
 
 /*****************************************************************************/
 /*!

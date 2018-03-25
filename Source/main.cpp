@@ -30,11 +30,10 @@
 #include <string>   // string:c
 #include <cstdlib>  // srand
 #include <ctime>    // time
-
-#include "../header/Options.h"     // Options:c
-#include "../header/Phoneme.h"     // Phoneme:c
-#include "../header/Phonet.h"      // Phonet:c
-#include "../header/PhonemePool.h" // PhonemePool:c
+#include "../Header/Options.h"     // Options:c
+#include "../Header/Phoneme.h"     // Phoneme:c
+#include "../Header/Phonet.h"      // Phonet:c
+#include "../Header/PhonemePool.h" // PhonemePool:c
 
 /*****************************************************************************/
 /*!
@@ -43,9 +42,9 @@
   generating a phonet for printing.
 
 \param argc
-  The number of arguments provided on the command line.
+  Number of arguments.
 \param argv
-  The strings of the arguments provided on the command line.
+  Argument strings.
 
 \return main int
 */
