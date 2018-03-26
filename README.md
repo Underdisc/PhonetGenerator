@@ -11,12 +11,12 @@ At first, this generator could only generate words for the English language, but
 
 You can either build it from source or check the release folder. Each of the zips in the release folder contain the configuration files needed to run the program.
 
-If you want to build from source, do this from the root of the repository.
+If you want to build from source, do this from the root of the repository. The
+makefile should already be generated, but in the case where the makefile does not work, feel free to generate your own.
 I am using version 3.6.2 of cmake.
 
 ```
-mkdir build
-cd build
+cd Build
 cmake ../
 make
 ```
@@ -24,12 +24,11 @@ make
 Alternatively, since this project is very small.
 
 ```
-mkdir build
-cd build
-g++ ../src/main.cpp ../src/Options.cpp ../src/Phoneme.cpp ../src/PhonemePool.cpp ../src/Phonet.cpp ../src/utility.cpp -o ptgen.exe
+cd Build
+g++ ../Source/main.cpp ../Source/Options.cpp ../Source/Phoneme.cpp ../Source/PhonemePool.cpp ../Source/Phonet.cpp ../Source/utility.cpp -o ptgen.exe
 ```
 
-After that, just make sure that the config directory is located in the same directory as the program before running it.
+After that, just make sure that the Config/ directory is located in the same directory as the program before running it. The Config/ directory contains the phoneme configurations used by the phonet generator.
 
 ## Options
 - --maximum-length [number or -n [number]: Decide the minimum number of phonemes in a phonet.
