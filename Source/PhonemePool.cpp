@@ -17,6 +17,7 @@
 #include "../Header/utility.h" // read_file
 #include "../Header/PhonemePool.h"
 
+//! string null terminator
 #define NUL '\0'
 
 /*****************************************************************************/

@@ -47,8 +47,8 @@ Phonet::Phonet() : m_phonemes(), m_min_length(2), m_max_length(10)
   object creation. The Phonet will begin with a min length of 2 and a max length
   of ten.
 
-\param phonemes
-  The vector of phonemes that will be used to generate a random phonet.
+\param pool
+  The pool of phonemes that will be used to generate a random phonet.
 \param min_length
   The minimum length the Phonet could have when generated.
 \param max_length
@@ -97,6 +97,9 @@ Phonet::~Phonet()
 \brief
   Given a vector of all the existing phonemes being used, a randomized
   phonet will be generated.
+
+\param pool
+  The pool of phonemes that will be used to generate the phonet.
 */
 /*****************************************************************************/
 

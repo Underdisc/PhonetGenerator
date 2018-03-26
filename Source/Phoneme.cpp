@@ -48,6 +48,8 @@ Phoneme::Phoneme(): m_phoneme(), m_example(), m_spellings(), m_rules()
   A standard string containing an example of the phoneme in use.
 \param spellings
   A vector a strings which contain possible spellings for the Phoneme.
+\param id
+  The line number this new phoneme was read in on.
 */
 /*****************************************************************************/
 Phoneme::Phoneme(const std::string & phoneme, const std::string & example,

@@ -51,9 +51,6 @@
     - Phonets now use Phoneme class instead of std::string.
     - Phonets no longer need a seed for generation. To seed to generation,
       srand() and give a seed.
-
-\bug
-    - The generation is terrible.
 */
 /*****************************************************************************/
 
