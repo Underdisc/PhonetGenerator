@@ -123,167 +123,167 @@ ptgen/fast:
 	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/build
 .PHONY : ptgen/fast
 
-src/Options.o: src/Options.cpp.o
+Source/Options.o: Source/Options.cpp.o
 
-.PHONY : src/Options.o
-
-# target to build an object file
-src/Options.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Options.cpp.o
-.PHONY : src/Options.cpp.o
-
-src/Options.i: src/Options.cpp.i
-
-.PHONY : src/Options.i
-
-# target to preprocess a source file
-src/Options.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Options.cpp.i
-.PHONY : src/Options.cpp.i
-
-src/Options.s: src/Options.cpp.s
-
-.PHONY : src/Options.s
-
-# target to generate assembly for a file
-src/Options.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Options.cpp.s
-.PHONY : src/Options.cpp.s
-
-src/Phoneme.o: src/Phoneme.cpp.o
-
-.PHONY : src/Phoneme.o
+.PHONY : Source/Options.o
 
 # target to build an object file
-src/Phoneme.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phoneme.cpp.o
-.PHONY : src/Phoneme.cpp.o
+Source/Options.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Options.cpp.o
+.PHONY : Source/Options.cpp.o
 
-src/Phoneme.i: src/Phoneme.cpp.i
+Source/Options.i: Source/Options.cpp.i
 
-.PHONY : src/Phoneme.i
+.PHONY : Source/Options.i
 
 # target to preprocess a source file
-src/Phoneme.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phoneme.cpp.i
-.PHONY : src/Phoneme.cpp.i
+Source/Options.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Options.cpp.i
+.PHONY : Source/Options.cpp.i
 
-src/Phoneme.s: src/Phoneme.cpp.s
+Source/Options.s: Source/Options.cpp.s
 
-.PHONY : src/Phoneme.s
+.PHONY : Source/Options.s
 
 # target to generate assembly for a file
-src/Phoneme.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phoneme.cpp.s
-.PHONY : src/Phoneme.cpp.s
+Source/Options.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Options.cpp.s
+.PHONY : Source/Options.cpp.s
 
-src/PhonemePool.o: src/PhonemePool.cpp.o
+Source/Phoneme.o: Source/Phoneme.cpp.o
 
-.PHONY : src/PhonemePool.o
+.PHONY : Source/Phoneme.o
 
 # target to build an object file
-src/PhonemePool.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o
-.PHONY : src/PhonemePool.cpp.o
+Source/Phoneme.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o
+.PHONY : Source/Phoneme.cpp.o
 
-src/PhonemePool.i: src/PhonemePool.cpp.i
+Source/Phoneme.i: Source/Phoneme.cpp.i
 
-.PHONY : src/PhonemePool.i
+.PHONY : Source/Phoneme.i
 
 # target to preprocess a source file
-src/PhonemePool.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.i
-.PHONY : src/PhonemePool.cpp.i
+Source/Phoneme.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phoneme.cpp.i
+.PHONY : Source/Phoneme.cpp.i
 
-src/PhonemePool.s: src/PhonemePool.cpp.s
+Source/Phoneme.s: Source/Phoneme.cpp.s
 
-.PHONY : src/PhonemePool.s
+.PHONY : Source/Phoneme.s
 
 # target to generate assembly for a file
-src/PhonemePool.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.s
-.PHONY : src/PhonemePool.cpp.s
+Source/Phoneme.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phoneme.cpp.s
+.PHONY : Source/Phoneme.cpp.s
 
-src/Phonet.o: src/Phonet.cpp.o
+Source/PhonemePool.o: Source/PhonemePool.cpp.o
 
-.PHONY : src/Phonet.o
+.PHONY : Source/PhonemePool.o
 
 # target to build an object file
-src/Phonet.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phonet.cpp.o
-.PHONY : src/Phonet.cpp.o
+Source/PhonemePool.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o
+.PHONY : Source/PhonemePool.cpp.o
 
-src/Phonet.i: src/Phonet.cpp.i
+Source/PhonemePool.i: Source/PhonemePool.cpp.i
 
-.PHONY : src/Phonet.i
+.PHONY : Source/PhonemePool.i
 
 # target to preprocess a source file
-src/Phonet.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phonet.cpp.i
-.PHONY : src/Phonet.cpp.i
+Source/PhonemePool.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.i
+.PHONY : Source/PhonemePool.cpp.i
 
-src/Phonet.s: src/Phonet.cpp.s
+Source/PhonemePool.s: Source/PhonemePool.cpp.s
 
-.PHONY : src/Phonet.s
+.PHONY : Source/PhonemePool.s
 
 # target to generate assembly for a file
-src/Phonet.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phonet.cpp.s
-.PHONY : src/Phonet.cpp.s
+Source/PhonemePool.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.s
+.PHONY : Source/PhonemePool.cpp.s
 
-src/main.o: src/main.cpp.o
+Source/Phonet.o: Source/Phonet.cpp.o
 
-.PHONY : src/main.o
+.PHONY : Source/Phonet.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+Source/Phonet.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phonet.cpp.o
+.PHONY : Source/Phonet.cpp.o
 
-src/main.i: src/main.cpp.i
+Source/Phonet.i: Source/Phonet.cpp.i
 
-.PHONY : src/main.i
+.PHONY : Source/Phonet.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+Source/Phonet.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phonet.cpp.i
+.PHONY : Source/Phonet.cpp.i
 
-src/main.s: src/main.cpp.s
+Source/Phonet.s: Source/Phonet.cpp.s
 
-.PHONY : src/main.s
+.PHONY : Source/Phonet.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+Source/Phonet.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phonet.cpp.s
+.PHONY : Source/Phonet.cpp.s
 
-src/utility.o: src/utility.cpp.o
+Source/main.o: Source/main.cpp.o
 
-.PHONY : src/utility.o
+.PHONY : Source/main.o
 
 # target to build an object file
-src/utility.cpp.o:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.o
-.PHONY : src/utility.cpp.o
+Source/main.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/main.cpp.o
+.PHONY : Source/main.cpp.o
 
-src/utility.i: src/utility.cpp.i
+Source/main.i: Source/main.cpp.i
 
-.PHONY : src/utility.i
+.PHONY : Source/main.i
 
 # target to preprocess a source file
-src/utility.cpp.i:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.i
-.PHONY : src/utility.cpp.i
+Source/main.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/main.cpp.i
+.PHONY : Source/main.cpp.i
 
-src/utility.s: src/utility.cpp.s
+Source/main.s: Source/main.cpp.s
 
-.PHONY : src/utility.s
+.PHONY : Source/main.s
 
 # target to generate assembly for a file
-src/utility.cpp.s:
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.s
-.PHONY : src/utility.cpp.s
+Source/main.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/main.cpp.s
+.PHONY : Source/main.cpp.s
+
+Source/utility.o: Source/utility.cpp.o
+
+.PHONY : Source/utility.o
+
+# target to build an object file
+Source/utility.cpp.o:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/utility.cpp.o
+.PHONY : Source/utility.cpp.o
+
+Source/utility.i: Source/utility.cpp.i
+
+.PHONY : Source/utility.i
+
+# target to preprocess a source file
+Source/utility.cpp.i:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/utility.cpp.i
+.PHONY : Source/utility.cpp.i
+
+Source/utility.s: Source/utility.cpp.s
+
+.PHONY : Source/utility.s
+
+# target to generate assembly for a file
+Source/utility.cpp.s:
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/utility.cpp.s
+.PHONY : Source/utility.cpp.s
 
 # Help Target
 help:
@@ -294,24 +294,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ptgen"
-	@echo "... src/Options.o"
-	@echo "... src/Options.i"
-	@echo "... src/Options.s"
-	@echo "... src/Phoneme.o"
-	@echo "... src/Phoneme.i"
-	@echo "... src/Phoneme.s"
-	@echo "... src/PhonemePool.o"
-	@echo "... src/PhonemePool.i"
-	@echo "... src/PhonemePool.s"
-	@echo "... src/Phonet.o"
-	@echo "... src/Phonet.i"
-	@echo "... src/Phonet.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/utility.o"
-	@echo "... src/utility.i"
-	@echo "... src/utility.s"
+	@echo "... Source/Options.o"
+	@echo "... Source/Options.i"
+	@echo "... Source/Options.s"
+	@echo "... Source/Phoneme.o"
+	@echo "... Source/Phoneme.i"
+	@echo "... Source/Phoneme.s"
+	@echo "... Source/PhonemePool.o"
+	@echo "... Source/PhonemePool.i"
+	@echo "... Source/PhonemePool.s"
+	@echo "... Source/Phonet.o"
+	@echo "... Source/Phonet.i"
+	@echo "... Source/Phonet.s"
+	@echo "... Source/main.o"
+	@echo "... Source/main.i"
+	@echo "... Source/main.s"
+	@echo "... Source/utility.o"
+	@echo "... Source/utility.i"
+	@echo "... Source/utility.s"
 .PHONY : help
 
 

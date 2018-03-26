@@ -84,7 +84,7 @@ Besides that, there is nothing else to these files. The order in which you put t
 
 - Each phoneme takes up and only one line. No more, no less.
 - Each of the four sections must be separated by a colon `:`.
-- Each delimiter within the sections must be separated by a comma `,`. This does not apply to sections 1 and 2. The identifier and pronunciation sections only take one parameter each.
+- Each element within the sections must be separated by a comma `,`. This does not apply to sections 1 and 2. The identifier and pronunciation sections only take one parameter each.
 - No spaces.
 
 Once you have created your file, just use the `--file` or `-f` option to specify the file path when running the program. The program will always use english_default.phoneme unless otherwise specified.

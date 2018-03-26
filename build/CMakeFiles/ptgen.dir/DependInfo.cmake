@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Options.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/Options.cpp.o"
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/Phoneme.cpp.o"
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o"
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/Phonet.cpp.o"
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/main.cpp.o"
-  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/src/utility.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Options.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/Options.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phoneme.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/PhonemePool.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phonet.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/Phonet.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/main.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/main.cpp.o"
+  "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/utility.cpp" "/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir/Source/utility.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

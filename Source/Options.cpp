@@ -54,7 +54,7 @@
 /*****************************************************************************/
 Options::Options(int argc, char ** argv): m_min_length(2), m_max_length(10),
 m_num_words(1), m_num_spellings(0), m_pronunciation(false),
-m_phoneme_file("config/english_default.phoneme"), m_help(false)
+m_phoneme_file("Config/english_default.phoneme"), m_help(false)
 {
   m_seed = (unsigned)time(0);
   parse_options(argc, argv);

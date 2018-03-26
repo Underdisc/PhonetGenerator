@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Options.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Options.h
 string
 -
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Phoneme.h
 string
 -
 vector
 -
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/PhonemePool.h
 vector
 -
 ../header/Phoneme.h
 /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Phonet.h
 ../header/Phoneme.h
 /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
 ../header/PhonemePool.h
@@ -32,9 +32,9 @@ string
 vector
 -
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/utility.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/utility.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Options.cpp
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Options.cpp
 getopt.h
 -
 ctime
@@ -43,18 +43,18 @@ cstdlib
 -
 iostream
 -
-../header/Options.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Options.h
+../Header/Options.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Options.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp
-../header/Phoneme.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phoneme.cpp
 cstdlib
 -
 iostream
 -
+../Header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Phoneme.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/PhonemePool.cpp
 cstdlib
 -
 vector
@@ -63,20 +63,20 @@ string
 -
 iostream
 -
-../header/utility.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/utility.h
-../header/PhonemePool.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+../Header/utility.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/utility.h
+../Header/PhonemePool.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/PhonemePool.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp
-../header/Phonet.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phonet.cpp
 cstdlib
 -
 iostream
 -
+../header/Phonet.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/main.cpp
 iostream
 -
 vector
@@ -87,16 +87,16 @@ cstdlib
 -
 ctime
 -
-../header/Options.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Options.h
-../header/Phoneme.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
-../header/Phonet.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
-../header/PhonemePool.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+../Header/Options.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Options.h
+../Header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Phoneme.h
+../Header/Phonet.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/Phonet.h
+../Header/PhonemePool.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/PhonemePool.h
 
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/utility.cpp
 iostream
 -
 fstream
@@ -105,6 +105,28 @@ vector
 -
 string
 -
-../header/utility.h
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/utility.h
+../Header/utility.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Header/utility.h
+
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+string
+-
+vector
+-
+
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+vector
+-
+../header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phonet.h
+../header/Phoneme.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/Phoneme.h
+../header/PhonemePool.h
+/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/header/PhonemePool.h
+string
+-
+vector
+-
 

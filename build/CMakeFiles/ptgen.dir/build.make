@@ -57,168 +57,168 @@ include CMakeFiles/ptgen.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ptgen.dir/flags.make
 
-CMakeFiles/ptgen.dir/src/main.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ptgen.dir/src/main.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/main.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp
+CMakeFiles/ptgen.dir/Source/main.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/main.cpp.o: ../Source/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ptgen.dir/Source/main.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/main.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/main.cpp
 
-CMakeFiles/ptgen.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/main.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp > CMakeFiles/ptgen.dir/src/main.cpp.i
+CMakeFiles/ptgen.dir/Source/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/main.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/main.cpp > CMakeFiles/ptgen.dir/Source/main.cpp.i
 
-CMakeFiles/ptgen.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/main.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/main.cpp -o CMakeFiles/ptgen.dir/src/main.cpp.s
+CMakeFiles/ptgen.dir/Source/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/main.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/main.cpp -o CMakeFiles/ptgen.dir/Source/main.cpp.s
 
-CMakeFiles/ptgen.dir/src/main.cpp.o.requires:
+CMakeFiles/ptgen.dir/Source/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/ptgen.dir/src/main.cpp.o.requires
+.PHONY : CMakeFiles/ptgen.dir/Source/main.cpp.o.requires
 
-CMakeFiles/ptgen.dir/src/main.cpp.o.provides: CMakeFiles/ptgen.dir/src/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/main.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/main.cpp.o.provides
+CMakeFiles/ptgen.dir/Source/main.cpp.o.provides: CMakeFiles/ptgen.dir/Source/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/main.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/main.cpp.o.provides
 
-CMakeFiles/ptgen.dir/src/main.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/main.cpp.o
-
-
-CMakeFiles/ptgen.dir/src/Options.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/Options.cpp.o: ../src/Options.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ptgen.dir/src/Options.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/Options.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Options.cpp
-
-CMakeFiles/ptgen.dir/src/Options.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/Options.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Options.cpp > CMakeFiles/ptgen.dir/src/Options.cpp.i
-
-CMakeFiles/ptgen.dir/src/Options.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/Options.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Options.cpp -o CMakeFiles/ptgen.dir/src/Options.cpp.s
-
-CMakeFiles/ptgen.dir/src/Options.cpp.o.requires:
-
-.PHONY : CMakeFiles/ptgen.dir/src/Options.cpp.o.requires
-
-CMakeFiles/ptgen.dir/src/Options.cpp.o.provides: CMakeFiles/ptgen.dir/src/Options.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Options.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/Options.cpp.o.provides
-
-CMakeFiles/ptgen.dir/src/Options.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/Options.cpp.o
+CMakeFiles/ptgen.dir/Source/main.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/main.cpp.o
 
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/Phonet.cpp.o: ../src/Phonet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ptgen.dir/src/Phonet.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/Phonet.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp
+CMakeFiles/ptgen.dir/Source/Options.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/Options.cpp.o: ../Source/Options.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ptgen.dir/Source/Options.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/Options.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Options.cpp
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/Phonet.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp > CMakeFiles/ptgen.dir/src/Phonet.cpp.i
+CMakeFiles/ptgen.dir/Source/Options.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/Options.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Options.cpp > CMakeFiles/ptgen.dir/Source/Options.cpp.i
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/Phonet.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phonet.cpp -o CMakeFiles/ptgen.dir/src/Phonet.cpp.s
+CMakeFiles/ptgen.dir/Source/Options.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/Options.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Options.cpp -o CMakeFiles/ptgen.dir/Source/Options.cpp.s
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.o.requires:
+CMakeFiles/ptgen.dir/Source/Options.cpp.o.requires:
 
-.PHONY : CMakeFiles/ptgen.dir/src/Phonet.cpp.o.requires
+.PHONY : CMakeFiles/ptgen.dir/Source/Options.cpp.o.requires
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.o.provides: CMakeFiles/ptgen.dir/src/Phonet.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phonet.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/Phonet.cpp.o.provides
+CMakeFiles/ptgen.dir/Source/Options.cpp.o.provides: CMakeFiles/ptgen.dir/Source/Options.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Options.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/Options.cpp.o.provides
 
-CMakeFiles/ptgen.dir/src/Phonet.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/Phonet.cpp.o
-
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.o: ../src/Phoneme.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ptgen.dir/src/Phoneme.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/Phoneme.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/Phoneme.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp > CMakeFiles/ptgen.dir/src/Phoneme.cpp.i
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/Phoneme.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/Phoneme.cpp -o CMakeFiles/ptgen.dir/src/Phoneme.cpp.s
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.requires:
-
-.PHONY : CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.requires
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.provides: CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.provides
-
-CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/Phoneme.cpp.o
+CMakeFiles/ptgen.dir/Source/Options.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/Options.cpp.o
 
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o: ../src/PhonemePool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.o: ../Source/Phonet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ptgen.dir/Source/Phonet.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/Phonet.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phonet.cpp
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/PhonemePool.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp > CMakeFiles/ptgen.dir/src/PhonemePool.cpp.i
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/Phonet.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phonet.cpp > CMakeFiles/ptgen.dir/Source/Phonet.cpp.i
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/PhonemePool.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/PhonemePool.cpp -o CMakeFiles/ptgen.dir/src/PhonemePool.cpp.s
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/Phonet.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phonet.cpp -o CMakeFiles/ptgen.dir/Source/Phonet.cpp.s
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.requires:
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.requires:
 
-.PHONY : CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.requires
+.PHONY : CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.requires
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.provides: CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.provides
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.provides: CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.provides
 
-CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o
+CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/Phonet.cpp.o
 
 
-CMakeFiles/ptgen.dir/src/utility.cpp.o: CMakeFiles/ptgen.dir/flags.make
-CMakeFiles/ptgen.dir/src/utility.cpp.o: ../src/utility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ptgen.dir/src/utility.cpp.o"
-	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/src/utility.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o: ../Source/Phoneme.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phoneme.cpp
 
-CMakeFiles/ptgen.dir/src/utility.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/src/utility.cpp.i"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp > CMakeFiles/ptgen.dir/src/utility.cpp.i
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/Phoneme.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phoneme.cpp > CMakeFiles/ptgen.dir/Source/Phoneme.cpp.i
 
-CMakeFiles/ptgen.dir/src/utility.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/src/utility.cpp.s"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/src/utility.cpp -o CMakeFiles/ptgen.dir/src/utility.cpp.s
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/Phoneme.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/Phoneme.cpp -o CMakeFiles/ptgen.dir/Source/Phoneme.cpp.s
 
-CMakeFiles/ptgen.dir/src/utility.cpp.o.requires:
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.requires:
 
-.PHONY : CMakeFiles/ptgen.dir/src/utility.cpp.o.requires
+.PHONY : CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.requires
 
-CMakeFiles/ptgen.dir/src/utility.cpp.o.provides: CMakeFiles/ptgen.dir/src/utility.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/src/utility.cpp.o.provides.build
-.PHONY : CMakeFiles/ptgen.dir/src/utility.cpp.o.provides
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.provides: CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.provides
 
-CMakeFiles/ptgen.dir/src/utility.cpp.o.provides.build: CMakeFiles/ptgen.dir/src/utility.cpp.o
+CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o
+
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o: ../Source/PhonemePool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/PhonemePool.cpp
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/PhonemePool.cpp > CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.i
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/PhonemePool.cpp -o CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.s
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.requires:
+
+.PHONY : CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.requires
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.provides: CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.provides
+
+CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o
+
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.o: CMakeFiles/ptgen.dir/flags.make
+CMakeFiles/ptgen.dir/Source/utility.cpp.o: ../Source/utility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ptgen.dir/Source/utility.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ptgen.dir/Source/utility.cpp.o -c /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/utility.cpp
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ptgen.dir/Source/utility.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/utility.cpp > CMakeFiles/ptgen.dir/Source/utility.cpp.i
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ptgen.dir/Source/utility.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/Source/utility.cpp -o CMakeFiles/ptgen.dir/Source/utility.cpp.s
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.o.requires:
+
+.PHONY : CMakeFiles/ptgen.dir/Source/utility.cpp.o.requires
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.o.provides: CMakeFiles/ptgen.dir/Source/utility.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ptgen.dir/build.make CMakeFiles/ptgen.dir/Source/utility.cpp.o.provides.build
+.PHONY : CMakeFiles/ptgen.dir/Source/utility.cpp.o.provides
+
+CMakeFiles/ptgen.dir/Source/utility.cpp.o.provides.build: CMakeFiles/ptgen.dir/Source/utility.cpp.o
 
 
 # Object files for target ptgen
 ptgen_OBJECTS = \
-"CMakeFiles/ptgen.dir/src/main.cpp.o" \
-"CMakeFiles/ptgen.dir/src/Options.cpp.o" \
-"CMakeFiles/ptgen.dir/src/Phonet.cpp.o" \
-"CMakeFiles/ptgen.dir/src/Phoneme.cpp.o" \
-"CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o" \
-"CMakeFiles/ptgen.dir/src/utility.cpp.o"
+"CMakeFiles/ptgen.dir/Source/main.cpp.o" \
+"CMakeFiles/ptgen.dir/Source/Options.cpp.o" \
+"CMakeFiles/ptgen.dir/Source/Phonet.cpp.o" \
+"CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o" \
+"CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o" \
+"CMakeFiles/ptgen.dir/Source/utility.cpp.o"
 
 # External object files for target ptgen
 ptgen_EXTERNAL_OBJECTS =
 
-ptgen.exe: CMakeFiles/ptgen.dir/src/main.cpp.o
-ptgen.exe: CMakeFiles/ptgen.dir/src/Options.cpp.o
-ptgen.exe: CMakeFiles/ptgen.dir/src/Phonet.cpp.o
-ptgen.exe: CMakeFiles/ptgen.dir/src/Phoneme.cpp.o
-ptgen.exe: CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o
-ptgen.exe: CMakeFiles/ptgen.dir/src/utility.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/main.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/Options.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/Phonet.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o
+ptgen.exe: CMakeFiles/ptgen.dir/Source/utility.cpp.o
 ptgen.exe: CMakeFiles/ptgen.dir/build.make
 ptgen.exe: CMakeFiles/ptgen.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ptgen.exe"
@@ -229,12 +229,12 @@ CMakeFiles/ptgen.dir/build: ptgen.exe
 
 .PHONY : CMakeFiles/ptgen.dir/build
 
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/main.cpp.o.requires
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/Options.cpp.o.requires
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/Phonet.cpp.o.requires
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/Phoneme.cpp.o.requires
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/PhonemePool.cpp.o.requires
-CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/src/utility.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/main.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/Options.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/Phonet.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/Phoneme.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/PhonemePool.cpp.o.requires
+CMakeFiles/ptgen.dir/requires: CMakeFiles/ptgen.dir/Source/utility.cpp.o.requires
 
 .PHONY : CMakeFiles/ptgen.dir/requires
 
