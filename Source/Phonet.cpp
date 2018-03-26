@@ -27,7 +27,7 @@
 
 #include <cstdlib>  // srand, rand
 #include <iostream> // cout, endl
-#include "../header/Phonet.h" // Phonet:c
+#include "../Header/Phonet.h" // Phonet:c
 
 /*****************************************************************************/
 /*!
