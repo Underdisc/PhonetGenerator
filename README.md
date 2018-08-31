@@ -11,8 +11,7 @@ At first, this generator could only generate words for the English language, but
 
 You can either build it from source or check the release folder. Each of the zips in the release folder contain the configuration files needed to run the program.
 
-If you want to build from source, do this from the root of the repository. The
-makefile should already be generated, but in the case where the makefile does not work, feel free to generate your own.
+If you want to build from source, you can build the project using cmake. 
 I am using version 3.6.2 of cmake.
 
 ```

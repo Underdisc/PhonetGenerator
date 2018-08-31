@@ -1,3 +1,0 @@
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/Underdisc/Tech/Program/C-C++/PhonetGenerator/build/CMakeFiles/ptgen.dir
